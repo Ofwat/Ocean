@@ -19,20 +19,20 @@ select unique_id
     ,pc_unit_description
     ,decimal_places
     ,direction_of_improving_performance 
-    ,[2015-16 notional outperformance payment or underperformance payment accrued at 31 March 2016] notional_outperformance_payment_or_underperformance_payment_accrued
-    ,[2015-16 notional outperformance payment or underperformance payment accrued at 31 March 2016 (GBPm)] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
-    ,[2015-16 outperformance payment or underperformance payment in-period ODIs] outperformance_payment_or_underperformance_payment_in_period_ODI
-    ,[2015-16 outperformance payment or underperformance payment in-period ODIs (GBPm)] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-    ,[2015-16 pcl] pcl
-    ,[2015-16 pcl met?] pcl_met
-    ,[2015-16 performance level - actual] performance_level_actual
-    ,[2015-16 Total AMP6 outperformance payment or underperformance payment 31 March 2020 forecast] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
-    ,[2015-16 Total AMP6 outperformance payment or underperformance payment 31 March 2020 forecast (GBPm)] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-    ,[Financial_ODI_2015-16] financial_odi
-    ,[UnderP_payment_collar_2015-16] underp_payment_collar
-    ,[UnderP_payment_deadband_2015-16] underp_payment_deadband
-    ,[OutP_payment_deadband_2015-16] outp_payment_deadband
-    ,[OutP_payment_cap_2015-16] outp_payment_cap
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_2015_16] notional_outperformance_payment_or_underperformance_payment_accrued
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_gbpm_2015_16] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,[outp_payment_or_underp_payment_in_period_odis_2015_16] outperformance_payment_or_underperformance_payment_in_period_ODI
+    ,[outp_payment_or_underp_payment_in_period_odis_gbpm_2015_16] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
+    ,[pcl_2015_16] pcl
+    ,[pcl_met_2015_16] pcl_met
+    ,[performance_level_actual_2015_16] performance_level_actual
+    ,[total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_2015_16] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
+    ,[total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2015_16] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+    ,[financial_odi_2015_16] financial_odi
+    ,[underp_payment_collar_2015_16] underp_payment_collar
+    ,[underp_payment_deadband_2015_16] underp_payment_deadband
+    ,[outp_payment_deadband_2015_16] outp_payment_deadband
+    ,[outp_payment_cap_2015_16] outp_payment_cap
     ,'N/A' enhanced_underp_payment_collar
     ,'N/A' standard_underp_payment_collar
     ,'N/A' standard_outp_payment_cap

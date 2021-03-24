@@ -1,8 +1,7 @@
-/****** Script for SelectTopNRows command from SSMS  ******/
-SELECT TOP (1000) [company]
+SELECT [company]
       ,[unique_id]
       ,[outcome]
-      ,[pc_ref_company]
+      ,[pc_ref]
       ,[performance_commitment]
       ,[pc_short_description]
       ,[water_resources]

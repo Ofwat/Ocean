@@ -25,7 +25,7 @@ select unique_id
     ,'N/A' outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
     ,'N/A' pcl
     ,'N/A' pcl_met
-    ,[2014-15 performance level - actual] performance_level_actual
+    ,[performance_level_actual_2014_15] performance_level_actual
     ,'N/A' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
     ,'N/A' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
     ,'N/A' financial_odi

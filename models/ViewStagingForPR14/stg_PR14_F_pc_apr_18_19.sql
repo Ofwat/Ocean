@@ -19,20 +19,20 @@ select unique_id
 	,pc_unit_description
 	,decimal_places
 	,direction_of_improving_performance
-	,[2018-19 notional outperformance payment or underperformance payment accrued at 31 March 2019] notional_outperformance_payment_or_underperformance_payment_accrued
-	,[2018-19 notional outperformance payment or underperformance payment accrued at 31 March 2019 (GBPm)] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
-	,[2018-19 outperformance payment or underperformance payment in-period ODIs] outperformance_payment_or_underperformance_payment_in_period_ODI
-	,[2018-19 outperformance payment or underperformance payment in-period ODIs (GBPm)] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-	,[2018-19 pcl] pcl
-	,[2018-19 pcl met?] pcl_met
-	,[2018-19 performance level - actual] performance_level_actual
-	,[2018-19 Total AMP6 outperformance payment or underperformance payment 31 March 2020 forecast] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
-	,[2018-19 Total AMP6 outperformance payment or underperformance payment 31 March 2020 forecast (GBPm)] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-	,[Financial_ODI_2018-19] financial_odi
-	,[OutP_payment_deadband_2018-19] outp_payment_deadband
-	,[UnderP_payment_deadband_2016-17] underp_payment_deadband
-	,[OutP_payment_cap_2018-19] outp_payment_cap
-	,[UnderP_payment_collar_2018-19] underp_payment_collar
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2018_2018_19] notional_outperformance_payment_or_underperformance_payment_accrued
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2018_gbpm_2018_19] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,[outp_payment_or_underp_payment_in_period_odis_2018_19] outperformance_payment_or_underperformance_payment_in_period_ODI
+    ,[outp_payment_or_underp_payment_in_period_odis_gbpm_2018_19] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
+    ,[pcl_2018_19] pcl
+    ,[pcl_met_2018_19] pcl_met
+    ,[performance_level_actual_2018_19] performance_level_actual
+    ,[total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_2018_19] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
+    ,[total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2018_19] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+    ,[financial_odi_2018_19] financial_odi
+    ,[underp_payment_collar_2018_19] underp_payment_collar
+    ,[underp_payment_deadband_2018_19] underp_payment_deadband
+    ,[outp_payment_deadband_2018_19] outp_payment_deadband
+    ,[outp_payment_cap_2018_19] outp_payment_cap
     ,'N/A' enhanced_underp_payment_collar
     ,'N/A' standard_underp_payment_collar
     ,'N/A' standard_outp_payment_cap

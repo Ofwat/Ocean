@@ -19,13 +19,13 @@ select unique_id
 	,pc_unit_description
 	,decimal_places
 	,direction_of_improving_performance
-	,[2019-20 notional outperformance payment or underperformance payment accrued at 31 March 2020_estimates] notional_outperformance_payment_or_underperformance_payment_accrued
-    ,[2019-20 notional outperformance payment or underperformance payment accrued at 31 March 2020 (GBPm)_estimates] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
-    ,[2019-20 outperformance payment or underperformance payment in-period ODIs_estimates] outperformance_payment_or_underperformance_payment_in_period_ODI
-    ,[2019-20 outperformance payment or underperformance payment in-period ODIs (GBPm)_estimates] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
+	,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_estimates_2019_20] notional_outperformance_payment_or_underperformance_payment_accrued
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_gbpm_estimates_2019_20] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,[outp_payment_or_underp_payment_in_period_odis_estimates_2019_20] outperformance_payment_or_underperformance_payment_in_period_ODI
+    ,[outp_payment_or_underp_payment_in_period_odis_gbpm_estimates_2019_20] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
 	,'N/A' pcl
-	,[2019-20 pcl met?_estimates] pcl_met
-    ,[2019-20 performance level - actual_estimates] performance_level_actual
+	,[pcl_met_estimates_2019_20] pcl_met
+    ,[performance_level_actual_estimates_2019_20] performance_level_actual
 	,'N/A' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
     ,'N/A' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
     ,'N/A' financial_odi
