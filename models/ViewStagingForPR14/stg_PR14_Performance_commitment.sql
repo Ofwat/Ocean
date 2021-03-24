@@ -8,7 +8,7 @@ select  {{dbt_utils.hash(dbt_utils.concat(['pc_name','primary_category','pc_unit
         ,primary_category
         ,pc_unit
         ,pc_unit_description
-        ,decimal_places from {{ ref('PR14FDOutcomeView') }}
+        ,decimal_places from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
         group by ltrim(right(performance_commitment, len(performance_commitment) - charindex(':',performance_commitment)))
             ,primary_category
             ,pc_unit

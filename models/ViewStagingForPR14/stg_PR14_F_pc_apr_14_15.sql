@@ -37,5 +37,5 @@ select unique_id
     ,'N/A' standard_underp_payment_collar
     ,'N/A' standard_outp_payment_cap
     ,'N/A' enhanced_outp_payment_cap
-    from {{ ref('PR14FDOutcomeView') }}
+    from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
     

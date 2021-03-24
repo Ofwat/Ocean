@@ -37,4 +37,4 @@ select unique_id
     ,[Standard underperformance payment collar 2024-25] standard_underp_payment_collar
     ,[Standard outperformance payment cap 2024-25] standard_outp_payment_cap
     ,[Enhanced outperformance payment cap 2024-25] enhanced_outp_payment_cap
-     from {{ ref('PR19FDOutcomeView') }}
+     from {{ ref('PR19FinalCSVcreatedbyPythonView') }}

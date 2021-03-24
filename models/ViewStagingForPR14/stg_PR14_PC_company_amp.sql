@@ -1,5 +1,5 @@
 with pr14 as (
-    select * from {{ ref('PR14FDOutcomeView') }}
+    select * from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
 ),
 company as (
     select * from {{ ref('D_Water_company') }}
