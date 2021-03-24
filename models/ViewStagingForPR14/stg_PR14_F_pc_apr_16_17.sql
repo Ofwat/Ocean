@@ -11,7 +11,7 @@ select unique_id
     ,performance_commitment
     ,odi_type
     ,odi_form
-    ,'N/A' odi_timing
+    ,'' odi_timing
     ,in_period_odi
     ,vanilla_odi
     ,primary_category
@@ -19,8 +19,8 @@ select unique_id
     ,pc_unit_description
     ,decimal_places
     ,direction_of_improving_performance
-    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_2016_17] notional_outperformance_payment_or_underperformance_payment_accrued
-    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_gbpm_2016_17] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_2015_16] notional_outperformance_payment_or_underperformance_payment_accrued
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_gbpm_2015_16] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
     ,[outp_payment_or_underp_payment_in_period_odis_2016_17] outperformance_payment_or_underperformance_payment_in_period_ODI
     ,[outp_payment_or_underp_payment_in_period_odis_gbpm_2016_17] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
     ,[pcl_2016_17] pcl
@@ -33,8 +33,8 @@ select unique_id
     ,[underp_payment_deadband_2016_17] underp_payment_deadband
     ,[outp_payment_deadband_2016_17] outp_payment_deadband
     ,[outp_payment_cap_2016_17] outp_payment_cap
-    ,'N/A' enhanced_underp_payment_collar
-    ,'N/A' standard_underp_payment_collar
-    ,'N/A' standard_outp_payment_cap
-    ,'N/A' enhanced_outp_payment_cap
+    ,'' enhanced_underp_payment_collar
+    ,'' standard_underp_payment_collar
+    ,'' standard_outp_payment_cap
+    ,'' enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}

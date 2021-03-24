@@ -43,20 +43,20 @@ final as (
     ,'N/A' standard_odi_cal
     ,standard_odi_operand
     ,standard_odi_operand_note
-    ,[UnderP_payment1_incentive rate (GBPm)]
-    ,[UnderP_payment2_incentive rate (GBPm)]
-    ,[UnderP_payment3_incentive rate (GBPm)]
-    ,[UnderP_payment4_incentive rate (GBPm)]
-    ,[OutP_payment1_incentive rate (GBPm)]
-    ,[OutP_payment2_incentive rate (GBPm)]
-    ,'N/A' [Underperformance payment incentive rates -£m (2017-18 CPIH deflated) Standard underperformance payment 1 (tier 2)]
-    ,'N/A' [Underperformance payment incentive rates -£m (2017-18 CPIH deflated) Standard underperformance payment 2 (tier 1)]
-    ,'N/A' [Underperformance payment incentive rates -£m (2017-18 CPIH deflated) Standard underperformance payment 3 (tier 3)]
-    ,'N/A' [Underperformance payment incentive rates -£m (2017-18 CPIH deflated) Enhanced underperformance payment]
-    ,'N/A' [Outperformance payment incentive rates £m (2017-18 CPIH deflated) Standard outperformance payment 1 (tier 2)]
-    ,'N/A' [Outperformance payment incentive rates £m (2017-18 CPIH deflated) Standard outperformance payment 2 (tier 1)]
-    ,'N/A' [Outperformance payment incentive rates £m (2017-18 CPIH deflated) Standard outperformance payment 3 (tier 3)]
-    ,'N/A' [Outperformance payment incentive rates £m (2017-18 CPIH deflated) Enhanced outperformance payment]
+    ,[underp_payment1_incentive_rate_gbpm]
+    ,[underp_payment2_incentive_rate_gbpm]
+    ,[underp_payment3_incentive_rate_gbpm]
+    ,[underp_payment4_incentive_rate_gbpm]
+    ,[outp_payment1_incentive_rate_gbpm]
+    ,[outp_payment2_incentive_rate_gbpm]
+    ,'N/A' [underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
+    ,'N/A' [underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
+    ,'N/A' [underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
+    ,'N/A' [underp_payment_incentive_enhanced_underp_payment]
+    ,'N/A' [outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
+    ,'N/A' [outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
+    ,'N/A' [outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
+    ,'N/A' [outp_payment_incentive_enhanced_outp_payment]
     ,water_resources
     ,water_network_plus
     ,wastewater_network_plus

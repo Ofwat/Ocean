@@ -11,7 +11,7 @@ select unique_id
     ,performance_commitment
     ,odi_type
     ,odi_form
-    ,'N/A' odi_timing
+    ,'' odi_timing
     ,in_period_odi
     ,vanilla_odi
     ,primary_category
@@ -26,13 +26,15 @@ select unique_id
 	,[pcl_2019_20] pcl
     ,[pcl_met_2019_20] pcl_met
     ,[performance_level_actual_2019_20] performance_level_actual
-    ,[financial_odi_2019_20-20] financial_odi
+    ,'' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
+    ,'' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+    ,[financial_odi_2019_20] financial_odi
     ,[underp_payment_collar_2019_20] underp_payment_collar
     ,[underp_payment_deadband_2019_20] underp_payment_deadband
     ,[outp_payment_deadband_2019_20] outp_payment_deadband
     ,[outp_payment_cap_2019_20] outp_payment_cap
-    ,'N/A' enhanced_underp_payment_collar
-    ,'N/A' standard_underp_payment_collar
-    ,'N/A' standard_outp_payment_cap
-    ,'N/A' enhanced_outp_payment_cap
+    ,'' enhanced_underp_payment_collar
+    ,'' standard_underp_payment_collar
+    ,'' standard_outp_payment_cap
+    ,'' enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}

@@ -11,7 +11,7 @@ select unique_id
     ,performance_commitment
     ,odi_type
     ,odi_form
-    ,'N/A' odi_timing
+    ,'' odi_timing
     ,in_period_odi
     ,vanilla_odi
     ,primary_category
@@ -33,8 +33,8 @@ select unique_id
     ,[underp_payment_deadband_2015_16] underp_payment_deadband
     ,[outp_payment_deadband_2015_16] outp_payment_deadband
     ,[outp_payment_cap_2015_16] outp_payment_cap
-    ,'N/A' enhanced_underp_payment_collar
-    ,'N/A' standard_underp_payment_collar
-    ,'N/A' standard_outp_payment_cap
-    ,'N/A' enhanced_outp_payment_cap
+    ,'' enhanced_underp_payment_collar
+    ,'' standard_underp_payment_collar
+    ,'' standard_outp_payment_cap
+    ,'' enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}

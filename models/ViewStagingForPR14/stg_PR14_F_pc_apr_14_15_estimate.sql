@@ -11,7 +11,7 @@ select unique_id
     ,performance_commitment
     ,odi_type
     ,odi_form
-    ,'N/A' odi_timing
+    ,'' odi_timing
     ,in_period_odi
     ,vanilla_odi
     ,primary_category
@@ -19,22 +19,22 @@ select unique_id
     ,pc_unit_description
     ,decimal_places
     ,direction_of_improving_performance
-    ,'N/A' notional_outperformance_payment_or_underperformance_payment_accrued
-    ,'N/A' notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
-    ,'N/A' outperformance_payment_or_underperformance_payment_in_period_ODI
-    ,'N/A' outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-    ,'N/A' pcl
-    ,'N/A' pcl_met
+    ,'' notional_outperformance_payment_or_underperformance_payment_accrued
+    ,'' notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,'' outperformance_payment_or_underperformance_payment_in_period_ODI
+    ,'' outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
+    ,'' pcl
+    ,'' pcl_met
     ,[starting_level_pr14_fd_2014_15] performance_level_actual
-    ,'N/A' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
-    ,'N/A' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-    ,'N/A' financial_odi
-    ,'N/A' underp_payment_collar
-    ,'N/A' underp_payment_deadband
-    ,'N/A' outp_payment_deadband
-    ,'N/A' outp_payment_cap
-    ,'N/A' enhanced_underp_payment_collar
-    ,'N/A' standard_underp_payment_collar
-    ,'N/A' standard_outp_payment_cap
-    ,'N/A' enhanced_outp_payment_cap
+    ,'' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
+    ,'' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+    ,'' financial_odi
+    ,'' underp_payment_collar
+    ,'' underp_payment_deadband
+    ,'' outp_payment_deadband
+    ,'' outp_payment_cap
+    ,'' enhanced_underp_payment_collar
+    ,'' standard_underp_payment_collar
+    ,'' standard_outp_payment_cap
+    ,'' enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
