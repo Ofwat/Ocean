@@ -34,7 +34,7 @@ select
 
 FROM [F_sub_measure_apr_union] 
     inner join sub_measure on 
-        {{dbt_utils.hash(dbt_utils.concat(['F_sub_measure_apr_union.unique_id','F_sub_measure_apr_union.sub_measure_ID','F_sub_measure_apr_union.company']))}} 
+        {{dbt_utils.hash(dbt_utils.concat(['F_sub_measure_apr_union.unique_id','F_sub_measure_apr_union.sub_measure_id','F_sub_measure_apr_union.company']))}} 
         = sub_measure.D_sub_measure_id
     left join company on F_sub_measure_apr_union.company = company.water_company_acronym
     left join pc_company_amp on F_sub_measure_apr_union.[unique_id] = pc_company_amp.unique_id

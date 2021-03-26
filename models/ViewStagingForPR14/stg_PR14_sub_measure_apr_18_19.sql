@@ -1,9 +1,3 @@
-with pr14submeasure as (
-    select * from {{ ref('PR14SubMeasuresView') }}
-),
-
-
-final as (
       select unique_id
    	  ,'2018-19' year
 	  ,'Actual' submission_status
@@ -15,40 +9,36 @@ final as (
       ,odi_type
       ,primary_category
       ,pc_unit_description
-      ,[2014-15 starting level (PR14 FD)]
-      ,[2018-19 PCL] pcl
-      ,sub_measure_ID
+      ,[starting_level_pr14_fd_2014_15]
+      ,[pcl_2018_19] pcl
+      ,sub_measure_id
       ,sub_measure
       ,sub_measure_category
       ,sub_measure_weighting
-      ,unit
+      ,pc_unit
       ,decimal_places
-      ,reference_regulatory_output_during_2010_15
-      ,reference_expected_performance_by_2014_15
-      ,[Reference_2018-19] reference
-      ,high_regulatory_output_during_2010_15
-      ,high_expected_performance_by_2014_15
-      ,[High_2018-19] high
-      ,low_regulatory_output_during_2010_15
-      ,low_expected_performance_by_2014_15
-      ,[Low_2018-19] low
+      ,submeasure_performace_level_reference_regulatory_output_during_2010_15
+      ,submeasure_performace_level_reference_expected_performance_by_2014_15
+      ,[submeasure_performace_level_2018_19] reference
+      ,submeasure_high_reference_regulatory_output_during_2010_15
+      ,submeasure_high_reference_expected_performance_by_2014_15
+      ,[submeasure_high_2018_19] high
+      ,submeasure_low_reference_regulatory_output_during_2010_15
+      ,submeasure_low_reference_expected_performance_by_2014_15
+      ,[submeasure_low_2018_19] low
       ,failure_threshold_for_AMP6
-      ,[2018-19 performance level - actual] performance_level_actual
-      ,[2018-19 performance level met?] performance_level_met
-      ,[Estimate_2019-20 performance level ]
-      ,[Estimate_2019-20 performance level met?]
-      ,[Blank]
-      ,[Company Name - Sub measure]
+      ,[actual_performance_level_pcs_submeasures_actual_2018_19] performance_level_actual
+      ,[actual_performance_level_pcs_submeasures_pcl_met_2018_19] performance_level_met
+      ,[actual_performance_level_pcs_submeasures_actual_estimate_2019_20]
+      ,[actual_performance_level_pcs_submeasures_pcl_met_estimate_2019_20]
       ,direction_of_improving_performance
-      ,[Comms filter]
-      ,[2014-15 to 2015-16]
-      ,[2015-16 to 2016-17]
-      ,[2016-17 to 2017-18]
-      ,[2017-18 to 2018-19]
-      ,[2018-19 to 2019-20]
-      ,[2014-15 to 2016-17 (AMP so far)]
-      from pr14submeasure
+      ,comms_filter
+      ,[actual_performance_compared_with_previous_actual_performance_2014_15_to_2015_16]
+      ,[actual_performance_compared_with_previous_actual_performance_2015_16_to_2016_17]
+      ,[actual_performance_compared_with_previous_actual_performance_2016_17_to_2017_18]
+      ,[actual_performance_compared_with_previous_actual_performance_2017_18_to_2018_19]
+      ,[actual_performance_compared_with_previous_actual_performance_2018_19_to_2019_20]
+      ,[actual_performance_compared_with_previous_actual_performance_2014_15_to_2016_17_amp_so_far]
+      from {{ ref('PR14SubmeasureFinalCSVcreatedbyPythonView') }}
       where Unique_ID is not NULL
-)
-
-select * from final
+      
