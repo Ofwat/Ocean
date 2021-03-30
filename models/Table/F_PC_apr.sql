@@ -8,7 +8,7 @@ pccompamp as (
     select * from {{ ref('stg_PC_company_amp_union') }}
 ),
 financialincentive as (
-    select * from {{ ref('stg_PR14_Financial_incentive_type') }}
+    select * from {{ ref('D_Financial_incentive_type') }}
 ),
 element as (
     select * from {{ ref('D_Element') }}
@@ -21,6 +21,7 @@ odi_characteristics as (
 ),
 renamed as (
     select year OFWAT_Year
+    ,Fpcaprunion.amp_id
     ,Fpcaprunion.submission_status
     ,pccompamp.unique_id
     ,company.water_company_id

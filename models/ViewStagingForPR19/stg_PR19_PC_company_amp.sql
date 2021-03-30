@@ -11,7 +11,7 @@ dateofwat as (
     select * from {{ ref('D_Date_OFWAT') }}
 ),
 amp as (
-    select * from {{ ref('stg_AMP_year') }}
+    select * from {{ ref('D_Ofwat_amp') }}
 ),
 
 final as (

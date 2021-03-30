@@ -1,6 +1,7 @@
 select unique_id
     ,'2014-15' year
     ,'Estimate' submission_status
+    ,amp.amp_id
     ,company_type
     ,company
     ,element_name
@@ -19,6 +20,7 @@ select unique_id
     ,pc_unit_description
     ,decimal_places
     ,direction_of_improving_performance
+
     ,CAST(NULL as varchar(max)) as notional_outperformance_payment_or_underperformance_payment_accrued
     ,CAST(NULL as varchar(max)) as notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
     ,CAST(NULL as varchar(max)) as outperformance_payment_or_underperformance_payment_in_period_ODI
@@ -38,3 +40,5 @@ select unique_id
     ,CAST(NULL as varchar(max)) as standard_outp_payment_cap
     ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
+    	cross join {{ ref('D_Ofwat_amp') }} amp
+	where amp.amp_name='AMP6'

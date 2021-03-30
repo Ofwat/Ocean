@@ -1,6 +1,7 @@
 select unique_id
     ,'2020-21' year
     ,'Not sure' submission_status
+    ,amp.amp_id
     ,CAST(NULL as varchar(max)) as company_type
     ,company
     ,CAST(NULL as varchar(max)) as element_name
@@ -38,3 +39,5 @@ select unique_id
     ,[standard_outp_payment_cap_2020_21] standard_outp_payment_cap
     ,[standard_outp_payment_cap_2020_21] enhanced_outp_payment_cap
      from {{ ref('PR19FinalCSVcreatedbyPythonView') }}
+         	cross join {{ ref('D_Ofwat_amp') }} amp
+	where amp.amp_name='AMP7'
