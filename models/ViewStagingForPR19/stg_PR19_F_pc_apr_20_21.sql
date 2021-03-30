@@ -1,6 +1,7 @@
 select unique_id
     ,'2020-21' year
     ,'Not sure' submission_status
+    ,amp.amp_id
     ,'N/A' company_type
     ,company
     ,'N/A' element_name
@@ -38,3 +39,5 @@ select unique_id
     ,[Standard outperformance payment cap 2020-21] standard_outp_payment_cap
     ,[Enhanced outperformance payment cap 2020-21] enhanced_outp_payment_cap
      from {{ ref('PR19FDOutcomeView') }}
+    	cross join {{ ref('D_Ofwat_amp') }} amp
+	where amp.amp_name='AMP6'

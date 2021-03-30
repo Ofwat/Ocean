@@ -1,6 +1,7 @@
 select unique_id
     ,'2015-16' year
     ,'Actual' submission_status
+    ,amp.amp_id
     ,company_type
     ,company
     ,element_name
@@ -38,3 +39,5 @@ select unique_id
     ,'N/A' standard_outp_payment_cap
     ,'N/A' enhanced_outp_payment_cap
     from {{ ref('PR14FDOutcomeView') }}
+    	cross join {{ ref('D_Ofwat_amp') }} amp
+	where amp.amp_name='AMP6'
