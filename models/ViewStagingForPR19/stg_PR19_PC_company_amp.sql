@@ -23,29 +23,29 @@ final as (
     ,outcome
     ,PC_ref
     ,common_and_comparable_bespoke_performance_commitment
-    ,'N/A' annex
+    ,CAST(NULL as varchar(max)) as annex
     ,direction_of_improving_performance
-    ,'N/A' drinking_water_quality_compliance
-    ,'N/A' water_quality_contacts
-    , 'N/A'supply_interruptions_3_hours
-    , 'N/A'pollution_incidents_cat_3
-    , 'N/A'internal_sewer_flooding
+    ,CAST(NULL as varchar(max)) as drinking_water_quality_compliance
+    ,CAST(NULL as varchar(max)) as water_quality_contacts
+    , CAST(NULL as varchar(max)) assupply_interruptions_3_hours
+    , CAST(NULL as varchar(max)) aspollution_incidents_cat_3
+    , CAST(NULL as varchar(max)) asinternal_sewer_flooding
     ,special_cost_factor
     ,scheme_specific_factor
     ,asset_health
     ,nep
     ,AIM
     ,customers_relative_priority
-    ,'N/A' no_of_sub_measures
+    ,CAST(NULL as varchar(max)) as no_of_sub_measures
     ,standard_odi_cal
     ,standard_odi_operand
     ,standard_odi_operand_note
-    ,'N/A' [UnderP_payment1_incentive rate (GBPm)]
-    ,'N/A' [UnderP_payment2_incentive rate (GBPm)]
-    ,'N/A' [UnderP_payment3_incentive rate (GBPm)]
-    ,'N/A' [UnderP_payment4_incentive rate (GBPm)]
-    ,'N/A' [OutP_payment1_incentive rate (GBPm)]
-    ,'N/A' [OutP_payment2_incentive rate (GBPm)]
+    ,CAST(NULL as varchar(max)) as [UnderP_payment1_incentive rate (GBPm)]
+    ,CAST(NULL as varchar(max)) as [UnderP_payment2_incentive rate (GBPm)]
+    ,CAST(NULL as varchar(max)) as [UnderP_payment3_incentive rate (GBPm)]
+    ,CAST(NULL as varchar(max)) as [UnderP_payment4_incentive rate (GBPm)]
+    ,CAST(NULL as varchar(max)) as [OutP_payment1_incentive rate (GBPm)]
+    ,CAST(NULL as varchar(max)) as [OutP_payment2_incentive rate (GBPm)]
     ,[underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
     ,[underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
     ,[underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]

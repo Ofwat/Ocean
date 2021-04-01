@@ -11,7 +11,7 @@ select unique_id
     ,performance_commitment
     ,odi_type
     ,odi_form
-    ,'' odi_timing
+    ,CAST(NULL as varchar(max)) as odi_timing
     ,in_period_odi
     ,vanilla_odi
     ,primary_category
@@ -19,22 +19,22 @@ select unique_id
     ,pc_unit_description
     ,decimal_places
     ,direction_of_improving_performance
-    ,'' notional_outperformance_payment_or_underperformance_payment_accrued
-    ,'' notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
-    ,'' outperformance_payment_or_underperformance_payment_in_period_ODI
-    ,'' outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-    ,'' pcl
-    ,'' pcl_met
+    ,CAST(NULL as varchar(max)) as notional_outperformance_payment_or_underperformance_payment_accrued
+    ,CAST(NULL as varchar(max)) as notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,CAST(NULL as varchar(max)) as outperformance_payment_or_underperformance_payment_in_period_ODI
+    ,CAST(NULL as varchar(max)) as outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
+    ,CAST(NULL as varchar(max)) as pcl
+    ,CAST(NULL as varchar(max)) as pcl_met
     ,[starting_level_pr14_fd_2014_15] performance_level_actual
-    ,'' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
-    ,'' Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-    ,'' financial_odi
-    ,'' underp_payment_collar
-    ,'' underp_payment_deadband
-    ,'' outp_payment_deadband
-    ,'' outp_payment_cap
-    ,'' enhanced_underp_payment_collar
-    ,'' standard_underp_payment_collar
-    ,'' standard_outp_payment_cap
-    ,'' enhanced_outp_payment_cap
+    ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
+    ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+    ,CAST(NULL as varchar(max)) as financial_odi
+    ,CAST(NULL as varchar(max)) as underp_payment_collar
+    ,CAST(NULL as varchar(max)) as underp_payment_deadband
+    ,CAST(NULL as varchar(max)) as outp_payment_deadband
+    ,CAST(NULL as varchar(max)) as outp_payment_cap
+    ,CAST(NULL as varchar(max)) as enhanced_underp_payment_collar
+    ,CAST(NULL as varchar(max)) as standard_underp_payment_collar
+    ,CAST(NULL as varchar(max)) as standard_outp_payment_cap
+    ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}

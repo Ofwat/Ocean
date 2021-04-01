@@ -10,7 +10,7 @@
       ,primary_category
       ,pc_unit_description
       ,starting_level_pr14_fd_2014_15
-      ,'' pcl
+      ,CAST(NULL as varchar(max)) as pcl
       ,sub_measure_id
       ,sub_measure
       ,sub_measure_category
@@ -19,16 +19,16 @@
       ,decimal_places
       ,submeasure_performace_level_reference_regulatory_output_during_2010_15
       ,submeasure_performace_level_reference_expected_performance_by_2014_15
-      ,'' reference
+      ,CAST(NULL as varchar(max)) as reference
       ,submeasure_high_reference_regulatory_output_during_2010_15
       ,submeasure_high_reference_expected_performance_by_2014_15
-      ,'' high
+      ,CAST(NULL as varchar(max)) as high
       ,submeasure_low_reference_regulatory_output_during_2010_15
       ,submeasure_low_reference_expected_performance_by_2014_15
-      ,'' low
+      ,CAST(NULL as varchar(max)) as low
       ,failure_threshold_for_AMP6
       ,[actual_performance_level_pcs_submeasures_actual_2014_15] performance_level_actual
-      ,'' performance_level_met
+      ,CAST(NULL as varchar(max)) as performance_level_met
       ,[actual_performance_level_pcs_submeasures_actual_estimate_2019_20]
       ,[actual_performance_level_pcs_submeasures_pcl_met_estimate_2019_20]
       ,direction_of_improving_performance

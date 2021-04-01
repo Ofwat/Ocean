@@ -1,4 +1,4 @@
 SELECT distinct(odi_type)
       ,odi_form
-      ,'N/A' odi_timing
+      ,CAST(NULL as varchar(max)) as odi_timing
   FROM {{ ref('PR14FinalCSVcreatedbyPythonView') }}

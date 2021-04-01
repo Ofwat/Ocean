@@ -11,7 +11,7 @@ select unique_id
     ,performance_commitment
     ,odi_type
     ,odi_form
-    ,'' odi_timing
+    ,CAST(NULL as varchar(max)) as odi_timing
     ,in_period_odi
     ,vanilla_odi
     ,primary_category
@@ -33,8 +33,8 @@ select unique_id
     ,[underp_payment_deadband_2017_18] underp_payment_deadband
     ,[outp_payment_deadband_2017_18] outp_payment_deadband
     ,[outp_payment_cap_2017_18] outp_payment_cap
-    ,'' enhanced_underp_payment_collar
-    ,'' standard_underp_payment_collar
-    ,'' standard_outp_payment_cap
-    ,'' enhanced_outp_payment_cap
+    ,CAST(NULL as varchar(max)) as enhanced_underp_payment_collar
+    ,CAST(NULL as varchar(max)) as standard_underp_payment_collar
+    ,CAST(NULL as varchar(max)) as standard_outp_payment_cap
+    ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
