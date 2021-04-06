@@ -57,14 +57,14 @@ final as (
     ,CAST(NULL as varchar(max)) as [outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
     ,CAST(NULL as varchar(max)) as [outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
     ,CAST(NULL as varchar(max)) as [outp_payment_incentive_enhanced_outp_payment]
-    ,water_resources
-    ,water_network_plus
-    ,wastewater_network_plus
-    ,bioresources_sludge
-    ,residential_retail
-    ,business_retail
-    ,direct_procurement_for_customers
-    ,dummy_control
+    ,[price_control_allocation_water_resources]
+    ,[price_control_allocation_water_network_plus]
+    ,[price_control_allocation_wastewater_network_plus]
+    ,[price_control_allocation_bioresources_sludge]
+    ,[price_control_allocation_residential_retail]
+    ,[price_control_allocation_business_retail]
+    ,[price_control_allocation_direct_procurement_for_customers]
+    ,[price_control_allocation_dummy_control]
     from pr14 
         left join pc
         on ltrim(right(pr14.performance_commitment, len(pr14.performance_commitment) - charindex(':',pr14.performance_commitment)))=pc.pc_name
