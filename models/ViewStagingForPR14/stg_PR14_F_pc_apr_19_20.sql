@@ -24,7 +24,7 @@ select unique_id
     ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_gbpm_2019_20] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
     ,[outp_payment_or_underp_payment_in_period_odis_2019_20] outperformance_payment_or_underperformance_payment_in_period_ODI
     ,[outp_payment_or_underp_payment_in_period_odis_gbpm_2019_20] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-	,[pcl_2019_20] pcl
+	  ,[pcl_2019_20] pcl
     ,[pcl_met_2019_20] pcl_met
     ,[performance_level_actual_2019_20] performance_level_actual
     ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast

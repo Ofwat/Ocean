@@ -41,3 +41,4 @@ select unique_id
      from {{ ref('PR19FinalCSVcreatedbyPythonView') }}
          	cross join {{ ref('D_Ofwat_amp') }} amp
 	where amp.amp_name='AMP7'
+                          

@@ -40,4 +40,4 @@ select unique_id
     ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
     from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
     	cross join {{ ref('D_Ofwat_amp') }} amp
-	where amp.amp_name='AMP6'    
+	where amp.amp_name='AMP6'
