@@ -19,13 +19,13 @@
       ,decimal_places
       ,submeasure_performace_level_reference_regulatory_output_during_2010_15
       ,submeasure_performace_level_reference_expected_performance_by_2014_15
-      ,[submeasure_performace_level_2018_19] reference
+      ,[submeasure_performace_level_2018_19] submeasure_performace_level
       ,submeasure_high_reference_regulatory_output_during_2010_15
       ,submeasure_high_reference_expected_performance_by_2014_15
-      ,[submeasure_high_2018_19] high
+      ,[submeasure_high_2018_19] submeasure_high
       ,submeasure_low_reference_regulatory_output_during_2010_15
       ,submeasure_low_reference_expected_performance_by_2014_15
-      ,[submeasure_low_2018_19] low
+      ,[submeasure_low_2018_19] submeasure_low
       ,failure_threshold_for_AMP6
       ,[actual_performance_level_pcs_submeasures_actual_2018_19] performance_level_actual
       ,[actual_performance_level_pcs_submeasures_pcl_met_2018_19] performance_level_met

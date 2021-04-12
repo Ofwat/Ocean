@@ -19,13 +19,13 @@
       ,decimal_places
       ,submeasure_performace_level_reference_regulatory_output_during_2010_15
       ,submeasure_performace_level_reference_expected_performance_by_2014_15
-      ,CAST(NULL as varchar(max)) as reference
+      ,CAST(NULL as varchar(max)) as submeasure_performace_level
       ,submeasure_high_reference_regulatory_output_during_2010_15
       ,submeasure_high_reference_expected_performance_by_2014_15
-      ,CAST(NULL as varchar(max)) as high
+      ,CAST(NULL as varchar(max)) as submeasure_high
       ,submeasure_low_reference_regulatory_output_during_2010_15
       ,submeasure_low_reference_expected_performance_by_2014_15
-      ,CAST(NULL as varchar(max)) as low
+      ,CAST(NULL as varchar(max)) as submeasure_low
       ,failure_threshold_for_AMP6
       ,[actual_performance_level_pcs_submeasures_actual_2014_15] performance_level_actual
       ,CAST(NULL as varchar(max)) as performance_level_met
