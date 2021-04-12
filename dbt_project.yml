@@ -35,15 +35,23 @@ vars:
 # using the `{{ config(...) }}` macro.
 models:
   demo_dbt:
-    tables:
+    Table:
         materialized: table
-    csvsView:
+    TableFromRaw:
+        materialized: table
+    ViewFromraw:
         schema: staging
         materialized: view
-    viewTables:
+    ViewFromMainTables:
         schema: staging
         materialized: view
-    staging:
+    ViewStagingForPR14:
+        schema: staging
+        materialized: view
+    ViewStagingForPR19:
+        schema: staging
+        materialized: view
+    ViewStaging:
         schema: staging
         materialized: view
 seeds:
