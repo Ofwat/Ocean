@@ -32,12 +32,13 @@ final as (
         sub_measure_weighting,
         decimal_places,
         pc_unit,
-        submeasure_performace_level_reference_regulatory_output_during_2010_15,  
+        CAST(submeasure_performace_level_reference_regulatory_output_during_2010_15 as float) submeasure_performace_level_reference_regulatory_output_during_2010_15,  
         submeasure_performace_level_reference_expected_performance_by_2014_15,
-        submeasure_high_reference_regulatory_output_during_2010_15,
-        submeasure_high_reference_expected_performance_by_2014_15,
+        CAST(submeasure_high_reference_regulatory_output_during_2010_15 as float) submeasure_high_reference_regulatory_output_during_2010_15,
+        /*this value is null*/
+        CAST(submeasure_high_reference_expected_performance_by_2014_15 as float) submeasure_high_reference_expected_performance_by_2014_15,
         CAST(submeasure_low_reference_regulatory_output_during_2010_15 as float) submeasure_low_reference_regulatory_output_during_2010_15,
-        submeasure_low_reference_expected_performance_by_2014_15,
+        CAST(submeasure_low_reference_expected_performance_by_2014_15 as float) submeasure_low_reference_expected_performance_by_2014_15,
         failure_threshold_for_AMP6,
         submeasure.direction_of_improving_performance
     from submeasure 
