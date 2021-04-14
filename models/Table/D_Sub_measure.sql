@@ -32,8 +32,15 @@ final as (
         sub_measure_weighting,
         decimal_places,
         pc_unit,
-        CAST(submeasure_performace_level_reference_regulatory_output_during_2010_15 as float) submeasure_performace_level_reference_regulatory_output_during_2010_15,  
+        CAST(submeasure_performace_level_reference_regulatory_output_during_2010_15 as float) submeasure_performace_level_reference_regulatory_output_during_2010_15,
+        /*ODP-189 This field has text as well
+        so converting the column to isnumeric and making one more column to have only text*/
         submeasure_performace_level_reference_expected_performance_by_2014_15,
+        isnumeric(submeasure_performace_level_reference_expected_performance_by_2014_15) numeric_submeasure_performace_level_reference_expected_performance_by_2014_15,
+        case when isnumeric(submeasure_performace_level_reference_expected_performance_by_2014_15)=0
+        then submeasure_performace_level_reference_expected_performance_by_2014_15
+        else null end text_present_submeasure_performace_level_reference_expected_performance_by_2014_15,
+        /*ODP-191*/
         CAST(submeasure_high_reference_regulatory_output_during_2010_15 as float) submeasure_high_reference_regulatory_output_during_2010_15,
         /*this value is null*/
         CAST(submeasure_high_reference_expected_performance_by_2014_15 as float) submeasure_high_reference_expected_performance_by_2014_15,

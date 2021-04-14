@@ -27,6 +27,7 @@ select
     ,pc_company_amp.pc_company_amp_id
     ,sub_measure_category.sub_measure_category_id
     ,submeasure_performace_level
+    /*ODP-189*/
     ,CAST(submeasure_high as float) submeasure_high
     ,CAST(submeasure_low as float) submeasure_low
     ,performance_level_actual
