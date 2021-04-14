@@ -29,7 +29,7 @@ select
     ,submeasure_performace_level
     ,CAST(submeasure_high as float) submeasure_high
     ,CAST(submeasure_low as float) submeasure_low
-    ,CAST(submeasure_high as float) performance_level_actual
+    ,performance_level_actual
     ,performance_level_met
 FROM sub_measure_apr_union
     inner join sub_measure on 
