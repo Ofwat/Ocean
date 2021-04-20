@@ -23,12 +23,35 @@ SELECT [pc_company_amp_id]
       ,[standard_odi_cal]
       ,[standard_odi_operand]
       ,[standard_odi_operand_note]
+      /**
+    ,performance_level_actual pcl_Actual
+    ,isnumeric(performance_level_actual) numeric_pcl_actual
+    ,case when isnumeric(performance_level_actual) =1 then performance_level_actual 
+    else null end numeric_derived_pcl_actual
+      **/
       ,[underp_payment1_incentive_rate_gbpm]
+      ,isnumeric(underp_payment1_incentive_rate_gbpm) numeric_underp_payment1_incentive_rate_gbpm
+      ,case when isnumeric(underp_payment1_incentive_rate_gbpm) =1 then underp_payment1_incentive_rate_gbpm 
+      else null end underp_payment1_incentive_rate_gbpm_comments
       ,[underp_payment2_incentive_rate_gbpm]
-      ,[underp_payment3_incentive_rate_gbpm]
+      ,isnumeric(underp_payment2_incentive_rate_gbpm) numeric_underp_payment2_incentive_rate_gbpm
+      ,case when isnumeric(underp_payment2_incentive_rate_gbpm) =1 then underp_payment2_incentive_rate_gbpm 
+      else null end underp_payment2_incentive_rate_gbpm_comments
+      ,[underp_payment3_incentive_rate_gbpm] numeric_underp_payment3_incentive_rate_gbpm
+      ,case when isnumeric(underp_payment3_incentive_rate_gbpm) =1 then underp_payment3_incentive_rate_gbpm 
+      else null end underp_payment3_incentive_rate_gbpm_comments
       ,[underp_payment4_incentive_rate_gbpm]
+            ,[underp_payment4_incentive_rate_gbpm] numeric_underp_payment4_incentive_rate_gbpm
+      ,case when isnumeric(underp_payment4_incentive_rate_gbpm) =1 then underp_payment4_incentive_rate_gbpm 
+      else null end underp_payment4_incentive_rate_gbpm_comments
       ,[outp_payment1_incentive_rate_gbpm]
+            ,[outp_payment1_incentive_rate_gbpm] numeric_outp_payment1_incentive_rate_gbpm
+      ,case when isnumeric(outp_payment1_incentive_rate_gbpm) =1 then outp_payment1_incentive_rate_gbpm 
+      else null end outp_payment1_incentive_rate_gbpm_comments
       ,[outp_payment2_incentive_rate_gbpm]
+            ,[outp_payment2_incentive_rate_gbpm] numeric_outp_payment2_incentive_rate_gbpm
+      ,case when isnumeric(outp_payment2_incentive_rate_gbpm) =1 then outp_payment2_incentive_rate_gbpm 
+      else null end outp_payment2_incentive_rate_gbpm_comments
       ,[underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
       ,[underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
       ,[underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
