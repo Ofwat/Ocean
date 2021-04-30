@@ -1,4 +1,4 @@
-{% snapshot D_Element_inc_t %}
+{% snapshot D_Element_timestamp_snapshot %}
 
     {{
         config(
@@ -14,6 +14,6 @@
     , element_name
     , element_acronym
     ,load_date
-    from {{ ref('D_Element_inc')}}
+    from {{ ref('D_Element')}}
 
 {% endsnapshot %}

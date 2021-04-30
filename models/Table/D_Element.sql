@@ -5,11 +5,11 @@
     )
 }}
 
-    select element_id
+    select  {{dbt_utils.hash(dbt_utils.concat(['element_acronym','element_name']))}} element_id
     ,element_name
     ,element_acronym
     ,load_date
-    from {{ ref('D_Element_inc')}}
+    from (select distinct element_name, element_acronym from {{ ref('PR14FinalCSVcreatedbyPythonView')}}) e
     
 {% if is_incremental() %}
   where load_date >= (select max(load_date) from {{ this }})
