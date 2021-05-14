@@ -38,6 +38,21 @@ select unique_id
     ,CAST(NULL as varchar(max)) as standard_underp_payment_collar
     ,CAST(NULL as varchar(max)) as standard_outp_payment_cap
     ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
-    from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
+    ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_enhanced_underp_payment]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_enhanced_underp_payment]
+    ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
+    ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_enhanced_outp_payment]
+    ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_enhanced_outp_payment]    from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
     	cross join {{ ref('D_Ofwat_amp') }} amp
 	where amp.amp_name='AMP6'
