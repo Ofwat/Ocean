@@ -45,22 +45,6 @@ renamed as (
     [outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm]) financial_incentive_payment_GBPm
     ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
     ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-    ,[isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
-    ,[onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
-    ,[isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
-    ,[onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
-    ,[isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
-    ,[onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
-    ,[isnumeric_underp_payment_incentive_enhanced_underp_payment]
-    ,[onlynumeric_underp_payment_incentive_enhanced_underp_payment]
-    ,[isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
-    ,[onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
-    ,[isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
-    ,[onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
-    ,[isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
-    ,[onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
-    ,[isnumeric_outp_payment_incentive_enhanced_outp_payment]
-    ,[onlynumeric_outp_payment_incentive_enhanced_outp_payment]
     from Fpcaprunion 
         left join company  on Fpcaprunion.company=company.water_company_acronym
         left join pccompamp on Fpcaprunion.unique_id=pccompamp.unique_id

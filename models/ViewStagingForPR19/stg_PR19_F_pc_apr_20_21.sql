@@ -38,22 +38,7 @@ select unique_id
     ,[standard_underp_payment_collar_2020_21] standard_underp_payment_collar
     ,[standard_outp_payment_cap_2020_21] standard_outp_payment_cap
     ,[standard_outp_payment_cap_2020_21] enhanced_outp_payment_cap
-    ,[isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
-    ,[onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
-    ,[isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
-    ,[onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
-    ,[isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
-    ,[onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
-    ,[isnumeric_underp_payment_incentive_enhanced_underp_payment]
-    ,[onlynumeric_underp_payment_incentive_enhanced_underp_payment]
-    ,[isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
-    ,[onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
-    ,[isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
-    ,[onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
-    ,[isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
-    ,[onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
-    ,[isnumeric_outp_payment_incentive_enhanced_outp_payment]
-    ,[onlynumeric_outp_payment_incentive_enhanced_outp_payment]
+
      from {{ ref('PR19FinalCSVcreatedbyPythonView') }}
          	cross join {{ ref('D_Ofwat_amp') }} amp
 	where amp.amp_name='AMP7'
