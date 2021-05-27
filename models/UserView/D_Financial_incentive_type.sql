@@ -1,0 +1,1 @@
+select * from {{ ref('D_Financial_incentive_type') }}
