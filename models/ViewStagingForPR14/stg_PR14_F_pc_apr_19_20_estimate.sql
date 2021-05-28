@@ -1,3 +1,6 @@
+with source_update as (
+    select * from {{ source('nw', 'PR14FinalCSVcreatedbyPython') }}
+)
 select unique_id
     ,'2019-20' year
     ,'Estimate' submission_status
@@ -38,7 +41,7 @@ select unique_id
     ,CAST(NULL as varchar(max)) as standard_underp_payment_collar
     ,CAST(NULL as varchar(max)) as standard_outp_payment_cap
     ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
-  from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
+  from source_update
     	cross join {{ ref('D_Ofwat_amp') }} amp
 	where amp.amp_name='AMP6'
                           
