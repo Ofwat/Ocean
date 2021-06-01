@@ -79,6 +79,24 @@ final as (
     from pr19
         left join pc on pr19.performance_commitment=pc.performance_commitment
         and pr19.pc_unit=pc.pc_unit
+        /* few re cords are not getting in the final table as the desc in few is null or any other feild in the on query is null, so they dont get equal and we end up with no match
+        eg     select 
+    convert(varchar(50), hashbytes('md5', concat(unique_id, pc.performance_commitment, pc.primary_category, '')), 2)
+ pc_company_amp_id
+    ,pc.performance_commitment_id
+    ,pc.performance_commitment
+   ,company.water_company_id
+    ,unique_id
+    ,outcome
+    ,PC_ref
+    from pr19
+        left join pc on pr19.performance_commitment=pc.performance_commitment
+         and pr19.pc_unit=pc.pc_unit
+        and pr19.pc_unit_description=pc.pc_unit_description for this eg u can see in the performace commitment table the unit desc is null so it didnt match
+        and pr19.decimal_places=pc.decimal_places
+       and pr19.primary_category=pc.primary_category
+        left join company on pr19.company=company.water_company_acronym
+        where  pc.[performance_commitment_id] = '57A967ECBE9B9938F75BE01D8F9DA2CC' */
         and pr19.pc_unit_description=pc.pc_unit_description
         and pr19.decimal_places=pc.decimal_places
         and pr19.primary_category=pc.primary_category

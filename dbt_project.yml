@@ -41,9 +41,6 @@ models:
         materialized: table
     UserView:
         materialized: view
-    ViewFromMainTables:
-        schema: staging
-        materialized: view
     ViewStagingForPR14:
         schema: staging
         materialized: view

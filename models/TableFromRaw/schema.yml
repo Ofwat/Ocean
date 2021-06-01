@@ -27,37 +27,6 @@ models:
           description: "Description for the water company type"
           tests:
             - not_null
-  - name: D_ODI_form
-    description: "Table with ODI form"
-    columns:
-        - name: odi_form_id
-          description: "Id given to ODI form"
-          tests:
-            - unique
-            - not_null 
-        - name: odi_form_name
-          description: "ODI form name"
-          tests:
-            - unique
-            - not_null 
-  - name: D_ODI_type
-    description: "Table with ODI type"
-    columns:
-        - name: odi_type_id
-          description: "Id given to ODI type"
-          tests:
-            - unique
-            - not_null 
-        - name: odi_type_name 
-          description: "ODI type name"
-          tests:
-            - unique
-            - not_null
-        - name: odi_type_description
-          description: "ODI type description"
-          tests:
-            - unique
-            - not_null
   - name: D_Submission_status
     description: "Table with the type of submission"
     columns:
@@ -72,7 +41,7 @@ models:
             - unique
             - not_null
             - accepted_values:
-                values: ['DRAFT_DETERMINIATION','ACTUAL_APR','Forcast_APR','OFWAT_Intervention']
+                values: ['Drafted','Actual','Forcast','OFWAT_Intervention','Estimate']
         - name: submission_status_description
           description: "submission status description"
           tests:
