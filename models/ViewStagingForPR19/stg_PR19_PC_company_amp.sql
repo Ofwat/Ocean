@@ -1,5 +1,5 @@
 with pr19 as (
-    select * from {{ ref('PR19FinalCSVcreatedbyPythonView') }}
+    select * from {{ source('nw', 'PR19FinalCSVcreatedbyPython') }}
 ),
 company as (
     select * from {{ ref('D_Water_company') }}
@@ -15,9 +15,9 @@ amp as (
 ),
 
 final as (
-    select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.pc_name','pc.primary_category']))}} pc_company_amp_id
+    select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.performance_commitment','pc.primary_category']))}} pc_company_amp_id
     ,pc.performance_commitment_id
-    ,pc.pc_name
+    ,pc.performance_commitment
     ,company.water_company_id
     ,unique_id
     ,outcome
@@ -77,7 +77,7 @@ final as (
     ,[price_control_allocation_direct_procurement_for_customers]
     ,[price_control_allocation_dummy_control]
     from pr19
-        left join pc on pr19.pc_name=pc.pc_name
+        left join pc on pr19.performance_commitment=pc.performance_commitment
         and pr19.pc_unit=pc.pc_unit
         and pr19.pc_unit_description=pc.pc_unit_description
         and pr19.decimal_places=pc.decimal_places
