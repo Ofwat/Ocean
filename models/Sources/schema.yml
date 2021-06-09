@@ -8,11 +8,7 @@ sources:
         description: One record per order. Includes cancelled and deleted orders.
         columns:
           - name: unique_id
-            tests:
-              - not_null
           - name: company_type
-            tests:
-              - not_null
           - name: company
           - name: element_name
           - name: element_acronym
@@ -346,8 +342,15 @@ models:
                         Underperformance payment deadband - the actual performance level is within the underperformance payment deadband
                         Note: the 'PC list' worksheet does not include the Service Incentive Mechanism (SIM) adjustments in the PR19 final determinations,
                         published December 2019. See the 'Cover' worksheet for further information."
+            tests:
+               - accepted_values:
+                    values: [NULL,'(SIM)','0','Outperformance payment','Outperformance payment deadband','Underperformance payment','Underperformance payment deadband']
           - name: Incentive_Period
             description: "incentive period"
+            tests:
+              - not_null
+              - accepted_values:
+                    values: ['IN Period ODI','Notional Period']
     - name: D_ODI_characteristics
       description: "Table with ODI characteristics"
       columns:
@@ -470,6 +473,7 @@ models:
               - accepted_values:
                   values: ['TRUE']
           - name: no_of_sub_measures
+            column_type: nvarchar(max)
             description: "Count of PC sub-measures"
           - name: standard_odi_operand
             description: "Some PCs with a financial ODI have an incentive rate that uses a fraction or multiple of the PC pc_unit. We are using this column to hold the conversion factor.
