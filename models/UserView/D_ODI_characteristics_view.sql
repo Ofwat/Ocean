@@ -1,1 +1,0 @@
-SELECT *  FROM {{ ref('D_ODI_characteristics') }}
