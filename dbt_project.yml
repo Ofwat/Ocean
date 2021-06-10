@@ -39,11 +39,7 @@ models:
         materialized: table
     TableFromRaw:
         materialized: table
-    ViewFromraw:
-        schema: staging
-        materialized: view
-    ViewFromMainTables:
-        schema: staging
+    UserView:
         materialized: view
     ViewStagingForPR14:
         schema: staging

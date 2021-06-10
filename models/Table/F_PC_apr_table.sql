@@ -44,8 +44,8 @@
         ,financialincentive.financial_incentive_id
         ,coalesce([notional_outperformance_payment_or_underperformance_payment_accrued_GBPm],
         [outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm]) financial_incentive_payment_GBPm
-        ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
-        ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+        ,Total_AMP_outperformance_payment_or_underperformance_payment_forecast
+        ,Total_AMP_outperformance_payment_or_underperformance_payment_forecast_GBPm
         from Fpcaprunion 
             left join company  on Fpcaprunion.company=company.water_company_acronym
             left join pccompamp on Fpcaprunion.unique_id=pccompamp.unique_id

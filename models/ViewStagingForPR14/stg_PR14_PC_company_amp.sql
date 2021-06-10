@@ -1,5 +1,5 @@
 with pr14 as (
-    select * from {{ ref('PR14FinalCSVcreatedbyPythonView') }}
+    select * from {{ source('nw', 'PR14FinalCSVcreatedbyPython') }}
 ),
 company as (
     select * from {{ ref('D_Water_company') }}
@@ -43,20 +43,34 @@ final as (
     ,CAST(NULL as varchar(max)) as standard_odi_cal
     ,standard_odi_operand
     ,standard_odi_operand_note
-    ,[underp_payment1_incentive_rate_gbpm]
-    ,[underp_payment2_incentive_rate_gbpm]
-    ,[underp_payment3_incentive_rate_gbpm]
-    ,[underp_payment4_incentive_rate_gbpm]
-    ,[outp_payment1_incentive_rate_gbpm]
-    ,[outp_payment2_incentive_rate_gbpm]
-    ,CAST(NULL as varchar(max)) as [underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
-    ,CAST(NULL as varchar(max)) as [underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
-    ,CAST(NULL as varchar(max)) as [underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
-    ,CAST(NULL as varchar(max)) as [underp_payment_incentive_enhanced_underp_payment]
-    ,CAST(NULL as varchar(max)) as [outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
-    ,CAST(NULL as varchar(max)) as [outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
-    ,CAST(NULL as varchar(max)) as [outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
-    ,CAST(NULL as varchar(max)) as [outp_payment_incentive_enhanced_outp_payment]
+    ,[isnumeric_underp_payment1_incentive_rate_gbpm]
+    ,[isnumeric_underp_payment2_incentive_rate_gbpm]
+    ,[isnumeric_underp_payment3_incentive_rate_gbpm]
+    ,[isnumeric_underp_payment4_incentive_rate_gbpm]
+    ,[isnumeric_outp_payment1_incentive_rate_gbpm]
+    ,[isnumeric_outp_payment2_incentive_rate_gbpm]
+    ,[onlynumeric_underp_payment1_incentive_rate_gbpm]
+    ,[onlynumeric_underp_payment2_incentive_rate_gbpm]
+    ,[onlynumeric_underp_payment3_incentive_rate_gbpm]
+    ,[onlynumeric_underp_payment4_incentive_rate_gbpm]
+    ,[onlynumeric_outp_payment1_incentive_rate_gbpm]
+    ,[onlynumeric_outp_payment2_incentive_rate_gbpm]
+    ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [isnumeric_underp_payment_incentive_enhanced_underp_payment]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_underp_payment_incentive_enhanced_underp_payment]
+      ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply]
+      ,CAST(NULL as varchar(max)) as [isnumeric_outp_payment_incentive_enhanced_outp_payment]
+      ,CAST(NULL as varchar(max)) as [onlynumeric_outp_payment_incentive_enhanced_outp_payment]
     ,[price_control_allocation_water_resources]
     ,[price_control_allocation_water_network_plus]
     ,[price_control_allocation_wastewater_network_plus]

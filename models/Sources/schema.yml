@@ -1,0 +1,630 @@
+version: 2
+
+sources:
+  - name: nw
+    description: The actual python file
+    tables:
+      - name: PR14FinalCSVcreatedbyPython
+        description: One record per order. Includes cancelled and deleted orders.
+        columns:
+          - name: unique_id
+          - name: company_type
+          - name: company
+          - name: element_name
+          - name: element_acronym
+          - name: outcome
+          - name: pc_ref
+          - name: annex
+          - name: performance_commitment
+          - name: odi_type
+          - name: odi_form
+          - name: in_period_odi
+          - name: vanilla_odi
+          - name: primary_category
+          - name: pc_unit
+          - name: pc_unit_description
+          - name: decimal_places
+          - name: direction_of_improving_performance
+          - name: starting_level_pr14_fd_2014_15
+          - name: pcl_2015_16
+          - name: pcl_2016_17
+          - name: pcl_2017_18
+          - name: pcl_2018_19
+          - name: pcl_2019_20
+          - name: drinking_water_quality_compliance
+          - name: water_quality_contacts
+          - name: supply_interruptions_3_hours
+          - name: pollution_incidents_cat_3
+          - name: internal_sewer_flooding
+          - name: scheme_specific_factor
+          - name: asset_health
+          - name: nep
+          - name: aim
+          - name: no_of_sub_measures
+          - name: financial_odi_2015_16
+          - name: financial_odi_2016_17
+          - name: financial_odi_2017_18
+          - name: financial_odi_2018_19
+          - name: financial_odi_2019_20
+          - name: underp_payment_collar_2015_16
+          - name: underp_payment_collar_2016_17
+          - name: underp_payment_collar_2017_18
+          - name: underp_payment_collar_2018_19
+          - name: underp_payment_collar_2019_20
+          - name: underp_payment_deadband_2015_16
+          - name: underp_payment_deadband_2016_17
+          - name: underp_payment_deadband_2017_18
+          - name: underp_payment_deadband_2018_19
+          - name: underp_payment_deadband_2019_20
+          - name: outp_payment_deadband_2015_16
+          - name: outp_payment_deadband_2016_17
+          - name: outp_payment_deadband_2017_18
+          - name: outp_payment_deadband_2018_19
+          - name: outp_payment_deadband_2019_20
+          - name: outp_payment_cap_2015_16
+          - name: outp_payment_cap_2016_17
+          - name: outp_payment_cap_2017_18
+          - name: outp_payment_cap_2018_19
+          - name: outp_payment_cap_2019_20
+          - name: underp_payment1_incentive_rate_gbpm
+          - name: underp_payment2_incentive_rate_gbpm
+          - name: underp_payment3_incentive_rate_gbpm
+          - name: underp_payment4_incentive_rate_gbpm
+          - name: outp_payment1_incentive_rate_gbpm
+          - name: outp_payment2_incentive_rate_gbpm
+          - name: standard_odi_operand
+          - name: standard_odi_operand_note
+          - name: performance_level_actual_2014_15
+          - name: performance_level_actual_2015_16
+          - name: pcl_met_2015_16
+          - name: outp_payment_or_underp_payment_in_period_odis_2015_16
+          - name: outp_payment_or_underp_payment_in_period_odis_gbpm_2015_16
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_2015_16
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_gbpm_2015_16
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_2015_16
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2015_16
+          - name: performance_level_actual_2016_17
+          - name: pcl_met_2016_17
+          - name: outp_payment_or_underp_payment_in_period_odis_2016_17
+          - name: outp_payment_or_underp_payment_in_period_odis_gbpm_2016_17
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2017_2016_17
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2017_gbpm_2016_17
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_2016_17
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2016_17
+          - name: performance_level_actual_2017_18
+          - name: pcl_met_2017_18
+          - name: outp_payment_or_underp_payment_in_period_odis_2017_18
+          - name: outp_payment_or_underp_payment_in_period_odis_gbpm_2017_18
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2018_2017_18
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2018_gbpm_2017_18
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_2017_18
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2017_18
+          - name: performance_level_actual_2018_19
+          - name: pcl_met_2018_19
+          - name: outp_payment_or_underp_payment_in_period_odis_2018_19
+          - name: outp_payment_or_underp_payment_in_period_odis_gbpm_2018_19
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2019_2018_19
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2019_gbpm_2018_19
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_2018_19
+          - name: total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2018_19
+          - name: performance_level_actual_2019_20
+          - name: pcl_met_2019_20
+          - name: outp_payment_or_underp_payment_in_period_odis_2019_20
+          - name: outp_payment_or_underp_payment_in_period_odis_gbpm_2019_20
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_2019_20
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_gbpm_2019_20
+          - name: performance_level_actual_estimates_2019_20
+          - name: pcl_met_estimates_2019_20
+          - name: outp_payment_or_underp_payment_in_period_odis_estimates_2019_20
+          - name: outp_payment_or_underp_payment_in_period_odis_gbpm_estimates_2019_20
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_estimates_2019_20
+          - name: notional_outp_payment_or_underp_payment_accrued_at_31_march_2020_gbpm_estimates_2019_20
+          - name: price_control_allocation_water_resources
+          - name: price_control_allocation_water_network_plus
+          - name: price_control_allocation_wastewater_network_plus
+          - name: price_control_allocation_bioresources_sludge
+          - name: price_control_allocation_residential_retail
+          - name: price_control_allocation_business_retail
+          - name: price_control_allocation_direct_procurement_for_customers
+          - name: price_control_allocation_dummy_control
+          - name: isnumeric_underp_payment1_incentive_rate_gbpm
+          - name: isnumeric_underp_payment2_incentive_rate_gbpm
+          - name: isnumeric_underp_payment3_incentive_rate_gbpm
+          - name: isnumeric_underp_payment4_incentive_rate_gbpm
+          - name: isnumeric_outp_payment1_incentive_rate_gbpm
+          - name: isnumeric_outp_payment2_incentive_rate_gbpm
+          - name: onlynumeric_underp_payment1_incentive_rate_gbpm
+          - name: onlynumeric_underp_payment2_incentive_rate_gbpm
+          - name: onlynumeric_underp_payment3_incentive_rate_gbpm
+          - name: onlynumeric_underp_payment4_incentive_rate_gbpm
+          - name: onlynumeric_outp_payment1_incentive_rate_gbpm
+          - name: onlynumeric_outp_payment2_incentive_rate_gbpm
+      - name: PR14SubmeasureFinalCSVcreatedbyPython
+        description: pr14 sub measures
+        columns:
+          - name: unique_id
+          - name: company_type
+          - name: company
+          - name: element_acronym
+          - name: pc_ref
+          - name: performance_commitment
+          - name: odi_type
+          - name: primary_category
+          - name: pc_unit_description
+          - name: starting_level_pr14_fd_2014_15
+          - name: pcl_2015_16
+          - name: pcl_2016_17
+          - name: pcl_2017_18
+          - name: pcl_2018_19
+          - name: pcl_2019_20
+          - name: sub_measure_id
+          - name: sub_measure
+          - name: sub_measure_category
+          - name: sub_measure_weighting
+          - name: pc_unit
+          - name: decimal_places
+          - name: submeasure_performace_level_reference_regulatory_output_during_2010_15
+          - name: submeasure_performace_level_reference_expected_performance_by_2014_15
+          - name: submeasure_performace_level_2015_16
+          - name: submeasure_performace_level_2016_17
+          - name: submeasure_performace_level_2017_18
+          - name: submeasure_performace_level_2018_19
+          - name: submeasure_performace_level_2019_20
+          - name: submeasure_high_reference_regulatory_output_during_2010_15
+          - name: submeasure_high_reference_expected_performance_by_2014_15
+          - name: submeasure_high_2015_16
+          - name: submeasure_high_2016_17
+          - name: submeasure_high_2017_18
+          - name: submeasure_high_2018_19
+          - name: submeasure_high_2019_20
+          - name: submeasure_low_reference_regulatory_output_during_2010_15
+          - name: submeasure_low_reference_expected_performance_by_2014_15
+          - name: submeasure_low_2015_16
+          - name: submeasure_low_2016_17
+          - name: submeasure_low_2017_18
+          - name: submeasure_low_2018_19
+          - name: submeasure_low_2019_20
+          - name: failure_threshold_for_AMP6
+          - name: actual_performance_level_pcs_submeasures_actual_2014_15
+          - name: actual_performance_level_pcs_submeasures_actual_2015_16
+          - name: actual_performance_level_pcs_submeasures_pcl_met_2015_16
+          - name: actual_performance_level_pcs_submeasures_actual_2016_17
+          - name: actual_performance_level_pcs_submeasures_pcl_met_2016_17
+          - name: actual_performance_level_pcs_submeasures_actual_2017_18
+          - name: actual_performance_level_pcs_submeasures_pcl_met_2017_18
+          - name: actual_performance_level_pcs_submeasures_actual_2018_19
+          - name: actual_performance_level_pcs_submeasures_pcl_met_2018_19
+          - name: actual_performance_level_pcs_submeasures_actual_2019_20
+          - name: actual_performance_level_pcs_submeasures_pcl_met_2019_20
+          - name: actual_performance_level_pcs_submeasures_actual_estimate_2019_20
+          - name: actual_performance_level_pcs_submeasures_pcl_met_estimate_2019_20
+          - name: direction_of_improving_performance
+          - name: comms_filter
+          - name: actual_performance_compared_with_previous_actual_performance_2014_15_to_2015_16
+          - name: actual_performance_compared_with_previous_actual_performance_2015_16_to_2016_17
+          - name: actual_performance_compared_with_previous_actual_performance_2016_17_to_2017_18
+          - name: actual_performance_compared_with_previous_actual_performance_2017_18_to_2018_19
+          - name: actual_performance_compared_with_previous_actual_performance_2018_19_to_2019_20
+          - name: actual_performance_compared_with_previous_actual_performance_2014_15_to_2016_17_amp_so_far
+      - name: PR19FinalCSVcreatedbyPython
+        description: pr19 sub measures
+        columns:
+          - name: company
+          - name: unique_id
+          - name: outcome
+          - name: pc_ref
+          - name: performance_commitment pc_name
+          - name: pc_short_description
+          - name: price_control_allocation_water_resources
+          - name: price_control_allocation_water_network_plus
+          - name: price_control_allocation_wastewater_network_plus
+          - name: price_control_allocation_bioresources_sludge
+          - name: price_control_allocation_residential_retail
+          - name: price_control_allocation_business_retail
+          - name: price_control_allocation_direct_procurement_for_customers
+          - name: price_control_allocation_dummy_control
+          - name: odi_type
+          - name: odi_form
+          - name: odi_timing
+          - name: primary_category
+          - name: pc_unit
+          - name: pc_unit_description
+          - name: decimal_places
+          - name: direction_of_improving_performance
+          - name: common_and_comparable_bespoke_performance_commitment
+          - name: special_cost_factor
+          - name: scheme_specific_factor
+          - name: asset_health
+          - name: nep
+          - name: aim
+          - name: customers_relative_priority
+          - name: pcl_2020_21
+          - name: pcl_2021_22
+          - name: pcl_2022_23
+          - name: pcl_2023_24
+          - name: pcl_2024_25
+          - name: financial_odi_2020_21
+          - name: financial_odi_2021_22
+          - name: financial_odi_2022_23
+          - name: financial_odi_2023_24
+          - name: financial_odi_2024_25
+          - name: enhanced_underp_payment_collar_2020_21
+          - name: enhanced_underp_payment_collar_2021_22
+          - name: enhanced_underp_payment_collar_2022_23
+          - name: enhanced_underp_payment_collar_2023_24
+          - name: enhanced_underp_payment_collar_2024_25
+          - name: standard_underp_payment_collar_2020_21
+          - name: standard_underp_payment_collar_2021_22
+          - name: standard_underp_payment_collar_2022_23
+          - name: standard_underp_payment_collar_2023_24
+          - name: standard_underp_payment_collar_2024_25
+          - name: underp_payment_deadband_2020_21
+          - name: underp_payment_deadband_2021_22
+          - name: underp_payment_deadband_2022_23
+          - name: underp_payment_deadband_2023_24
+          - name: underp_payment_deadband_2024_25
+          - name: outp_payment_deadband_2020_21
+          - name: outp_payment_deadband_2021_22
+          - name: outp_payment_deadband_2022_23
+          - name: outp_payment_deadband_2023_24
+          - name: outp_payment_deadband_2024_25
+          - name: standard_outp_payment_cap_2020_21
+          - name: standard_outp_payment_cap_2021_22
+          - name: standard_outp_payment_cap_2022_23
+          - name: standard_outp_payment_cap_2023_24
+          - name: standard_outp_payment_cap_2024_25
+          - name: enhanced_outp_payment_cap_2020_21
+          - name: enhanced_outp_payment_cap_2021_22
+          - name: enhanced_outp_payment_cap_2022_23
+          - name: enhanced_outp_payment_cap_2023_24
+          - name: enhanced_outp_payment_cap_2024_25
+          - name: underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: underp_payment_incentive_enhanced_underp_payment
+          - name: outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: outp_payment_incentive_enhanced_outp_payment
+          - name: standard_odi_cal
+          - name: standard_odi_operand
+          - name: standard_odi_operand_note
+          - name: isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: isnumeric_underp_payment_incentive_enhanced_underp_payment
+          - name: onlynumeric_underp_payment_incentive_enhanced_underp_payment
+          - name: isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: isnumeric_outp_payment_incentive_enhanced_outp_payment
+          - name: onlynumeric_outp_payment_incentive_enhanced_outp_payment
+models:
+    - name: D_Element
+      description: "Table with Elements information model"
+      columns:
+          - name: element_id
+            description: "Unique id of Element"
+            tests:
+              - unique
+              - not_null
+          - name: element_name
+            description: "Name of Element"
+            tests:
+              - unique
+              - not_null
+              - accepted_values:
+                  values: ['Retail (HH)','Retail (NH)','Thames Tideway','Wastewater','Water']
+          - name: element_acronym
+            description: "Acronym of Element"
+            tests:
+              - unique
+              - not_null
+    - name: D_Financial_incentive_type
+      description: "Table with different types of finanacial incentive types"
+      columns:
+          - name: financial_incentive_id
+            description: "Id given to financial incentive type(hash value)"
+            tests:
+              - unique
+              - not_null
+          - name: financial_incentive_type
+            description: "This column applies to ODIs that are payable at the end of AMP6
+                        Outperformance payment - an outperformance payment has accrued at 31 March
+                        Underperformance payment - an underperformance payment has accrued at 31 March
+                        Outperformance payment deadband - the actual performance level is within the outperformance payment deadband
+                        Underperformance payment deadband - the actual performance level is within the underperformance payment deadband
+                        Note: the 'PC list' worksheet does not include the Service Incentive Mechanism (SIM) adjustments in the PR19 final determinations,
+                        published December 2019. See the 'Cover' worksheet for further information."
+            tests:
+               - accepted_values:
+                    values: [NULL,'(SIM)','0','Outperformance payment','Outperformance payment deadband','Underperformance payment','Underperformance payment deadband']
+          - name: Incentive_Period
+            description: "incentive period"
+            tests:
+              - not_null
+              - accepted_values:
+                    values: ['IN Period ODI','Notional Period']
+    - name: D_ODI_characteristics
+      description: "Table with ODI characteristics"
+      columns:
+          - name: ODI_characteristics_id
+            description: "ODI characteristics id"
+            tests:
+              - unique
+              - not_null
+          - name: odi_type
+            description: "Odi type"     
+          - name: odi_form
+            description: "Different type of odi form"
+          - name: odi_timing
+            description: "ODI timing"
+    - name: D_Performance_commitment
+      description: "Table with Performance commitments and information for them"
+      columns:
+          - name: performance_commitment_id
+            description: "Id given to Performance commitments(hash value)"
+            tests:
+              - unique
+          - name: pc_name
+            description: "Name for Performance commitments"
+          - name: primary_category
+            description: "Primary category
+                          We have allocated a primary category to each PC. This is an experimental indicator and not an exact science as many PCs overlap categories.
+                          We have included the primary category as a means of sign-posting similar PCs. It should be noted that PCs with the same primary category may not be directly comparable. Please refer to:
+                          • the relevant PR14 final determination company-specific appendix (annex 4) for individual PC definitions; and
+                          • the outcomes policy chapter for details of where we used comparative analysis at PR14.
+                          These documents are available to download from the Ofwat website:
+                          http://www.ofwat.gov.uk/regulated-companies/price-review/price-review-2014/final-determinations/"
+          - name: pc_unit
+            description: "pc_unit for Performance commitments eg %, £m, category, N/A, nr, rank, score, TBC, text, time"
+          - name: pc_unit_description
+            description: "Description of the PC pc_unit - free-format with no validation"
+          - name: decimal_places
+            description: "Number of decimal places used (where applicable)"
+    - name: D_PC_company_amp
+      description: "Table with connection Performance commitment, company and amp"
+      columns:
+          - name: pc_company_amp_id
+            description: "Unique ids for the row combintion of Performance commitment, company and amp"
+            tests:
+              - not_null
+          - name: performance_commitment_id
+            description: "Id from performance commitment table for mapping"
+            # tests:
+            #   - relationships:
+            #       to: ref('D_Performance_commitment')
+            #       field: performance_commitment_id
+          - name: water_company_id
+            description: "Id from Water company table for mapping"
+            tests:
+              - relationships:
+                  to: ref('D_Water_company')
+                  field: water_company_id
+          - name: unique_id
+            description: "Unique identifier for the performance commitment. It will be used in the
+                           Ofwat Fountain database and has been generated as follows:
+                           PR14 + water company acronym + element acronym + _ + PC reference
+                           For example: PR14AFWWSW_W-A1"
+            tests:
+              - unique
+          - name: pc_name
+            description: "Name from performance commitment table for mapping"
+            tests:
+              - relationships:
+                  to: ref('D_Performance_commitment')
+                  field: pc_name
+          - name: outcome
+            description: "Name of the outcome (free-format text with no validation)"
+          - name: PC_ref
+            description: "Free-format, but must be unique within each company’s set of PCs"
+          - name: annex
+            description: "The order in which the PC appeared in Annex 4 of the PR14 FD company-specific appendix"
+          - name: direction_of_improving_performance
+            description: "Up if an increase in the numeric value or score means a better (improving) performance
+                          Down if a decrease in the numeric value or score means a better (improving) performance
+                          Blank if neither of the above apply"
+          - name: drinking_water_quality_compliance
+            description: "Yes if the PC was included in the PR14 comparative assessment of drinking water quality compliance PCs, otherwise blank"
+            tests:
+              - accepted_values:
+                  values: ['TRUE']
+          - name: water_quality_contacts
+            description: "Yes if the PC was included in the PR14 comparative assessment of water quality contacts PCs, otherwise blank"
+            tests:
+              - accepted_values:
+                  values: ['TRUE']
+          - name: supply_interruptions_3_hours
+            description: "Yes if the PC was included in the PR14 comparative assessment of supply interruptions (>3 hours) PCs, otherwise blank"
+            tests:
+              - accepted_values:
+                  values: ['TRUE']
+          - name: pollution_incidents_cat_3
+            description: "Yes if the PC was included in the PR14 comparative assessment of pollution incidents (category 3) PCs, otherwise blank"
+            tests:
+              - accepted_values:
+                  values: ['TRUE']
+          - name: internal_sewer_flooding
+            description: "Yes if the PC was included in the PR14 comparative assessment of internal sewer flooding PCs, otherwise blank"
+            tests:
+              - accepted_values:
+                  values: ['TRUE']
+          - name: scheme_specific_factors_all_or_part
+            description: "Yes if the PC includes scheme-specific factors/elements, otherwise blank
+                          We are using this column to highlight PCs that relate, in the main, to specified and/ or major schemes.
+                          This is an experimental indicator and not an exact science."
+          - name: asset_health_resilience_all_or_part
+            description: "Yes if the PC includes (wholly or partially) asset health work, otherwise blank
+                          We are using this column to highlight PCs that relate, wholly or partially, to asset health or resilience.
+                          This is an experimental indicator and not an exact science."
+          - name: nep_all_or_part
+            description: "Yes if the PC includes (wholly or partially) National Environment Programme (NEP) work, otherwise blank
+                          We are using this column to highlight PCs that relate, wholly or partially, to work driven by the National Environment Programme (NEP).
+                          This is an experimental indicator and not an exact science."
+          - name: AIM
+            description: "Yes if the PC includes (wholly or partially) Abstraction Incentive Mechanism (AIM) work, otherwise blank"
+            tests:
+              - accepted_values:
+                  values: ['TRUE']
+          - name: no_of_sub_measures
+            column_type: nvarchar(max)
+            description: "Count of PC sub-measures"
+          - name: standard_odi_operand
+            description: "Some PCs with a financial ODI have an incentive rate that uses a fraction or multiple of the PC pc_unit. We are using this column to hold the conversion factor.
+                          For example, if rather than being calculated as:
+                          £m / PC pc_unit / year
+                          the outperformance payment or underperformance payment is calculated as:
+                          £m / 0.1 PC pc_unit / year
+                          then the conversion factor is 10.000"
+          - name: standard_odi_operand_note
+            description: "Free-format with no validation"
+          - name: UnderP_payment1_incentive rate (GBPm)
+            description: "Underperformance payment rate in £m
+                          Incentives rates that were changed following recalibration based on the company's menu choice are shaded in green"
+          - name: UnderP_payment2_incentive rate (GBPm)
+            description: "Underperformance payment rate in £m
+                          Incentives rates that were changed following recalibration based on the company's menu choice are shaded in green"
+          - name: UnderP_payment3_incentive rate (GBPm)
+            description: "Underperformance payment rate in £m
+                          Incentives rates that were changed following recalibration based on the company's menu choice are shaded in green"
+          - name: UnderP_payment4_incentive rate (GBPm)
+            description: "Underperformance payment rate in £m
+                          Incentives rates that were changed following recalibration based on the company's menu choice are shaded in green"
+          - name: OutP_payment1_incentive rate (GBPm)
+            description: "Underperformance payment rate in £m
+                          Incentives rates that were changed following recalibration based on the company's menu choice are shaded in green"
+          - name: OutP_payment2_incentive rate (GBPm)
+            description: "Underperformance payment rate in £m
+                          Incentives rates that were changed following recalibration based on the company's menu choice are shaded in green"
+    - name: F_PC_apr
+      description: "Fact table where all other tables connect"
+      columns:
+          - name: OFWAT_Year
+            description: "The year to which that row belongs to"
+            tests:
+              - not_null
+          - name: submission_status
+            description: "The type of submission is it actual or estimated"
+            tests:
+              - not_null 
+          - name: unique_id
+            description: "Unique id given to each pc/company/outcome"
+          - name: water_company_id
+            description: "Water company the fact record belong to"
+          - name: pc_company_amp_id
+            description: "PC company amp id"
+          - name: Submission_status_id
+            description: "Submission type if its estimated or actual"
+          - name: element_id
+            description: "Element it is associated with"
+          - name: odi_form_id
+            description: "odi form"
+          - name: odi_type_id
+            description: "odi type"
+          - name: underp_payment_collar
+            description: "underperformance payment collar"
+          - name: underp_payment_deadband
+            description: "underperformance payment deadband"
+          - name: outp_payment_deadband
+            description: "outperformance payment deadband"
+          - name: outp_payment_cap
+            description: "outperformance payment cap"
+          - name: pcl
+            description: "performance commitment level"
+          - name: pcl_met
+            description: "Yes - the performance commitment level for that year has been met
+                         No - the performance commitment level for that year has not been met
+                         Left blank - a performance commitment level has not been set for that year"
+          - name: pcl_Actual
+            description: "That particular years actual performance in the units the PC is measured in
+                          For example, if the PC is measured in Ml/day and the actual performance is 124.5 Ml/day,
+                          then this cell will hold the value 124.5
+                          This line applies to all PCs, including those with non-financial incentives and
+                          those where a performance commitment level has not been set for that year"
+          - name: Financial_incentive_type_id
+            description: "Id given to financial incentive type(hash value)"
+          - name: numeric_pcl_actual
+            description: "PCL met for that year, if it is only numeric value is 1 otherwise 0"
+          - name: numeric_derived_pcl_actual
+            description: "PCL with only numeric values"
+          - name: Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
+            description: "This column applies to all financial ODIs (that is, ODIs that are payable within AMP6 and ODIs that are payable at the end of AMP6)
+                          A forecast of the overall outperformance payment or underperformance payment paid/accrued by the end of AMP6 (31 March 2020) based on your current performance and your current expectation of your future performance.
+                          Outperformance payment - an overall outperformance payment is forecast
+                          Underperformance payment - an overall underperformance payment is forecast
+                          Outperformance payment deadband - if forecast to be within the outperformance payment deadband
+                          Underperformance payment deadband - if forecast to be within the underperformance payment deadband"
+          - name: Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
+            description: ""
+          - name: notional_incentive_type_id
+            description: "This column applies to ODIs that are payable at the end of AMP6
+                          Outperformance payment - an outperformance payment has accrued at 31 March 2016
+                          Underperformance payment - an underperformance payment has accrued at 31 March 2016
+                          Outperformance payment deadband - the actual performance level is within the outperformance payment deadband
+                          Underperformance payment deadband - the actual performance level is within the underperformance payment deadband
+                          Note: the 'PC list' worksheet does not include the Service Incentive Mechanism (SIM) adjustments in the PR19 final determinations, published December 2019. See the 'Cover' worksheet for further information."
+          - name: notional_incentive_payment_accrued_GBPm
+            description: "This column applies to ODIs that are payable at the end of AMP6
+                          The value of the outperformance payment or underperformance payment accrued at 31 March 2016 (£million)
+                          Note: the 'PC list' worksheet does not include the Service Incentive Mechanism (SIM) adjustments in the PR19 final determinations, published December 2019. See the 'Cover' worksheet for further information."
+          - name: In_Period_incentive_type_id
+            description: "This column applies to ODIs that are payable within AMP6 rather than at the end of AMP6 (that is, some of the Anglian Water, Severn Trent Water and South West Water ODIs)
+                          Outperformance payment - an outperformance payment has been earned at 31 March 2016
+                          Underperformance payment - an underperformance payment has been earned at 31 March 2016
+                          Outperformance payment deadband - the actual performance level is within the outperformance payment deadband
+                          Underperformance payment deadband - the actual performance level is within the underperformance payment deadband"
+          - name: In_Period_payment_GBPm
+            description: This column applies to ODIs that are payable within AMP6 rather than at the end of AMP6 (that is, some of the Anglian Water, Severn Trent Water and South West Water ODIs)
+                         The value of the outperformance payment or underperformance payment earned at 31 March 2016 (£million)"
+    - name: D_Water_company
+      description: "Table with company name and acronyms used"
+      columns:
+          - name: water_company_id
+            description: "Id given to company(hash value)"
+            tests:
+              - unique
+              - not_null 
+          - name: water_company_acronym
+            description: "Acronym used for a company name"
+            tests:
+              - unique
+              - not_null 
+          - name: water_company_name
+            description: "Company names"
+            tests:
+              - unique
+              - not_null 
+          - name: water_company_type
+            description: "Type of company WaSC or WoC"
+            tests:
+              - not_null 
+          - name: water_company_type_description 
+            description: "Description for the water company type"
+            tests:
+              - not_null
+    - name: D_Submission_status
+      description: "Table with the type of submission"
+      columns:
+          - name: submission_status_id
+            description: "Id given to submission status"
+            tests:
+              - unique
+              - not_null 
+          - name: submission_status_name
+            description: "submission status name"
+            tests:
+              - unique
+              - not_null
+              - accepted_values:
+                  values: ['Drafted','Actual','Forcast','OFWAT_Intervention','Estimate']
+          - name: submission_status_description
+            description: "submission status description"
+            tests:
+              - unique
+              - not_null

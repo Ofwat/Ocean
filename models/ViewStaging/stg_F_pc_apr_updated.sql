@@ -48,7 +48,7 @@
                 ELSE updates.pcl_met
             END AS pcl_met
             ,[performance_level_actual]
-            ,[Total_AMP6_outperformance_payment_or_underperformance_payment_forecast]
+            ,[Total_AMP6_outperformance_payment_or_underperformance_payment_forecast] as Total_AMP_outperformance_payment_or_underperformance_payment_forecast
             -- ,[Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm]
             ,CASE 
                  WHEN updates.unique_id IS NULL THEN amp6amp7base.[Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm]
