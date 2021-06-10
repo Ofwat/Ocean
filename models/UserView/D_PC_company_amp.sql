@@ -1,0 +1,1 @@
+SELECT *  FROM {{ ref('D_PC_company_amp_table')}}

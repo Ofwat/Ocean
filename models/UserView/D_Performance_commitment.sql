@@ -1,0 +1,1 @@
+SELECT * FROM {{ref('D_Performance_commitment_table') }}
