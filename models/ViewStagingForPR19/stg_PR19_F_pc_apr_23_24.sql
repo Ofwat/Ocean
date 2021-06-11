@@ -3,7 +3,7 @@ with source_update as (
 )
 select unique_id
 ,'2023-24' year
-,'Past performance' submission_status
+,'forecast' submission_status
 ,amp.amp_id
 ,CAST(NULL as varchar(max)) as company_type
 ,company
