@@ -1,7 +1,8 @@
 version: 2
 
 sources:
-  - name: nw
+  - name: generated_sources
+    schema: "{{ [context.target.schema,'generated_sources']|join('_') }}"
     description: The actual python file
     tables:
       - name: PR14FinalCSVcreatedbyPython
@@ -622,7 +623,7 @@ models:
               - unique
               - not_null
               - accepted_values:
-                  values: ['Drafted','Actual','Forcast','OFWAT_Intervention','Estimate']
+                  values: ['Drafted','Actual','Forecast','OFWAT_Intervention']
           - name: submission_status_description
             description: "submission status description"
             tests:

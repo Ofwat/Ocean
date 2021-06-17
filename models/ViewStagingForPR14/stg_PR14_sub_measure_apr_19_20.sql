@@ -1,5 +1,5 @@
 with source_update as (
-    select * from {{ source('nw', 'PR14SubmeasureFinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14SubmeasureFinalCSVcreatedbyPython') }}
 )
 select unique_id
 ,'2019-20' year

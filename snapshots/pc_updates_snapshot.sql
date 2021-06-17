@@ -2,7 +2,7 @@
 
 {{
     config(
-      target_schema='snapshots',
+      target_schema=generate_schema_name('snapshots'),
       unique_key='pc_updates_id',
       strategy='timestamp',
       updated_at='updated_at',

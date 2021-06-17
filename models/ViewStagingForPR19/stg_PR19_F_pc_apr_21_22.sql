@@ -1,9 +1,9 @@
 with source_update as (
-    select * from {{ source('nw', 'PR19FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR19FinalCSVcreatedbyPython') }}
 )
 select unique_id
 ,'2021-22' year
-,'forecast' submission_status
+,'Forecast' submission_status
 ,amp.amp_id
 ,CAST(NULL as varchar(max)) as company_type
 ,company
