@@ -1,0 +1,1 @@
+select * from {{ ref('D_Date_OFWAT_table')}}

@@ -1,5 +1,5 @@
 SELECT [performance_commitment_id]
-      ,[pc_name]
+      ,[performance_commitment]
       ,[primary_category]
       ,[pc_unit]
       ,[pc_unit_description]
