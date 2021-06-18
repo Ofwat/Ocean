@@ -389,13 +389,6 @@ models:
             tests:
               - unique
               - not_null
-              # - relationships:
-              #     to: ref('D_PC_company_amp_table')
-              #     field: performance_commitment_id
-                  # to: ref('D_Sub_measure_table')
-                  # field: performance_commitment_id
-                  # to: ref('F_PC_apr_table')
-                  # field: performance_commitment_id
           - name: performance_commitment
             description: "Name for Performance commitments"
           - name: primary_category
@@ -412,10 +405,10 @@ models:
             description: "Description of the PC pc_unit - free-format with no validation"
           - name: decimal_places
             description: "Number of decimal places used (where applicable)"
-    - name: D_PC_company_amp
+    - name: D_PC_company_pr
       description: "Table with connection Performance commitment, company and amp"
       columns:
-          - name: pc_company_amp_id
+          - name: pc_company_pr_id
             description: "Unique ids for the row combintion of Performance commitment, company and amp"
             tests:
               - not_null
@@ -556,34 +549,27 @@ models:
     - name: F_PC_apr
       description: "Fact table where all other tables connect"
       columns:
-          - name: OFWAT_Year
+          - name: year
             description: "The year to which that row belongs to"
             tests:
               - not_null
+              - relationships:
+                  to: ref('D_Year_table')
+                  field: year
           - name: submission_status
             description: "The type of submission is it actual or estimated"
             tests:
               - not_null 
           - name: unique_id
             description: "Unique id given to each pc/company/outcome"
-          - name: amp_id
-            description: "Amp id"
-            tests:  
-              - relationships:
-                  to: ref('D_Ofwat_amp_table')
-                  field: amp_id
           - name: water_company_id
             description: "Water company the fact record belong to"
             tests:  
               - relationships:
                   to: ref('D_Water_company_table')
                   field: water_company_id
-          - name: pc_company_amp_id
+          - name: pc_company_pr_id
             description: "PC company amp id"
-            # tests:  
-              # - relationships:
-              #     to: ref('D_PC_company_amp_table')
-              #     field: pc_company_amp_id
           - name: Submission_status_id
             description: "Submission type if its estimated or actual"
             tests:  

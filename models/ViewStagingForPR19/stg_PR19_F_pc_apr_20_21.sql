@@ -4,7 +4,7 @@ with source_update as (
 select unique_id
 ,'2020-21' year
 ,'Not sure' submission_status
-,amp.amp_id
+,'PR19' price_review
 ,CAST(NULL as varchar(max)) as company_type
 ,company
 ,CAST(NULL as varchar(max)) as element_name
@@ -42,6 +42,5 @@ select unique_id
 ,[standard_outp_payment_cap_2020_21] standard_outp_payment_cap
 ,[standard_outp_payment_cap_2020_21] enhanced_outp_payment_cap
 from source_update
-cross join {{ ref('D_Ofwat_amp') }} amp
-where amp.amp_name='AMP7' and unique_id is not null
+where  unique_id is not null
                         

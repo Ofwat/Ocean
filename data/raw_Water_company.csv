@@ -1,0 +1,22 @@
+water_company_acronym,water_company_name,water_company_type, water_company_type_description
+ANH,Anglian,WaSC,water and sewerage company
+HDD,Hafren Dyfrdwy,WaSC,water and sewerage company
+NES,Northumbrian,WaSC,water and sewerage company
+SRN,Southern,WaSC,water and sewerage company
+SVE,Severn Trent (England),WaSC,water and sewerage company
+SVT,Severn Trent,WaSC,water and sewerage company
+SWT,South West,WaSC,water and sewerage company
+TMS,Thames,WaSC,water and sewerage company
+WSH,Welsh,WaSC,water and sewerage company
+WSX,Wessex,WaSC,water and sewerage company
+YKY,Yorkshire,WaSC,water and sewerage company
+AFW,Affinity,WoC,water-only company
+BRL,Bristol,WoC,water-only company
+DVW,Dee Valley,WoC,water-only company
+PRT,Portsmouth,WoC,water-only company
+SBW,Bournemouth,WoC,water-only company
+SES,SES Water,WoC,water-only company
+SEW,South East,WoC,water-only company
+SSC,South Staffs & Cambridge,WoC,water-only company
+SWB,South West Water,Need to know,Need to know
+UUW,United Utilities,WaSC,water and sewerage company

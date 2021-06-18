@@ -2,20 +2,18 @@ with pr19 as (
     select * from {{ source('nw', 'PR19FinalCSVcreatedbyPython') }}
 ),
 company as (
-    select * from {{ ref('D_Water_company') }}
+    select * from {{ ref('D_Water_company_table') }}
 ),
 pc as (
     select * from {{ ref('stg_PR19_Performance_commitment') }}
 ),
-dateofwat as (
-    select * from {{ ref('D_Date_OFWAT') }}
-),
-amp as (
-    select * from {{ ref('D_Ofwat_amp') }}
+pr as (
+    select * from {{ ref('D_Price_review_table') }}
 ),
 
 final as (
-    select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.performance_commitment','pc.primary_category']))}} pc_company_amp_id
+    select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.performance_commitment','pc.primary_category']))}} pc_company_pr_id
+    ,pr.price_review
     ,pc.performance_commitment_id
     ,pc.performance_commitment
     ,company.water_company_id
@@ -83,8 +81,8 @@ final as (
         and isnull(pr19.decimal_places,'decimal_places') = isnull(pc.decimal_places,'decimal_places')
         and isnull(pr19.primary_category,'primary_category') = isnull(pc.primary_category,'primary_category')
         left join company on isnull(pr19.company,'company') = isnull(company.water_company_acronym,'company')
-        cross join amp
-        where amp.amp_name = 'AMP7' and unique_id is not null
+        cross join pr
+        where pr.price_review = 'PR19' and unique_id is not null
 )
 
 select * from final

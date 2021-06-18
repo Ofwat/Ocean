@@ -3,9 +3,9 @@ with source_update as (
 )
 
 select unique_id
-    ,'2014-15' year
+    ,'2014-15' OFWAT_Year
     ,'Estimate' submission_status
-    ,amp.amp_id
+    ,'PR14' price_review
     ,company_type
     ,company
     ,element_name
@@ -43,5 +43,4 @@ select unique_id
     ,CAST(NULL as varchar(max)) as standard_outp_payment_cap
     ,CAST(NULL as varchar(max)) as enhanced_outp_payment_cap
        from source_update
-    	cross join {{ ref('D_Ofwat_amp') }} amp
-	where amp.amp_name='AMP6' and unique_id is not null
+	where unique_id is not null

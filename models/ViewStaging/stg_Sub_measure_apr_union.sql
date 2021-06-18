@@ -1,3 +1,5 @@
+select * from {{ ref('stg_PR14_sub_measure_apr_10_15')}}
+union
 select * from {{ ref('stg_PR14_sub_measure_apr_14_15')}}
 Union
 select * from {{ ref('stg_PR14_sub_measure_apr_15_16')}}

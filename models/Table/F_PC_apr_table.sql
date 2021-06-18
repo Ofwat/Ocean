@@ -4,8 +4,8 @@ with Fpcaprunion as (
 company as (
     select * from {{ ref('D_Water_company_table') }}
 ),
-pccompamp as (
-    select * from {{ ref('stg_PC_company_amp_union') }}
+pccomppr as (
+    select * from {{ ref('stg_PC_company_pr_union') }}
 ),
 financialincentive as (
     select * from {{ ref('D_Financial_incentive_type_table') }}
@@ -19,13 +19,23 @@ submission as (
 odi_characteristics as (
     select * from {{ ref('D_ODI_characteristics_table') }}
 ),
+pr as (
+    select * from {{ ref('D_Price_review_table') }}
+),
+Performance_commitment as (
+    select * from {{ ref('D_Performance_commitment_table') }}
+),
+yeartable as (
+    select * from {{ ref('D_Year_table') }}
+),
 renamed as (
-    select year OFWAT_Year
-    ,Fpcaprunion.amp_id
+    select yeartable.year
+    ,yeartable.year_id
+    ,Fpcaprunion.price_review
     ,Fpcaprunion.submission_status
-    ,pccompamp.unique_id
+    ,pccomppr.unique_id
     ,company.water_company_id
-    ,pccompamp.pc_company_amp_id
+    ,pccomppr.pc_company_pr_id
     ,Submission_status_id
     ,element.element_id
     ,odi_characteristics.ODI_characteristics_id
@@ -47,7 +57,7 @@ renamed as (
     ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
     from Fpcaprunion 
         left join company  on isnull(Fpcaprunion.company,'company') = isnull(company.water_company_acronym,'company')
-        left join pccompamp on isnull(Fpcaprunion.unique_id,'unique_id') = isnull(pccompamp.unique_id,'unique_id')
+        left join pccomppr on isnull(Fpcaprunion.unique_id,'unique_id') = isnull(pccomppr.unique_id,'unique_id')
         left join element on isnull(Fpcaprunion.element_acronym,'element_acronym') = isnull(element.element_acronym,'element_acronym')
         left join submission on isnull(Fpcaprunion.submission_status,'submission_status') = isnull(submission.submission_status_name,'submission_status')
         left join financialincentive on coalesce([notional_outperformance_payment_or_underperformance_payment_accrued],
@@ -57,8 +67,7 @@ renamed as (
                 when [outperformance_payment_or_underperformance_payment_in_period_ODI] is not null then 'IN Period ODI'
                 else null end) = financialincentive.Incentive_Period
         left join odi_characteristics on isnull(Fpcaprunion.odi_form,'odi_characteristics') = isnull(odi_characteristics.odi_form,'odi_characteristics')
-        and isnull(Fpcaprunion.odi_type,'odi_type') = isnull(odi_characteristics.odi_type,'odi_type')
-        and isnull(Fpcaprunion.odi_timing,'odi_timing') = isnull(odi_characteristics.odi_timing,'odi_timing')
+        left join yeartable on yeartable.year = Fpcaprunion.Ofwat_Year
         where Fpcaprunion.company is not null
 )
 

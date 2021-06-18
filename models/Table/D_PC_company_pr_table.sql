@@ -1,4 +1,5 @@
-SELECT [pc_company_amp_id]
+SELECT [pc_company_pr_id]
+      ,price_review
       ,[performance_commitment_id]
       ,[performance_commitment]
       ,[water_company_id]
@@ -59,4 +60,4 @@ SELECT [pc_company_amp_id]
       ,[price_control_allocation_business_retail]
       ,[price_control_allocation_direct_procurement_for_customers]
       ,[price_control_allocation_dummy_control]
-  FROM {{ ref('stg_PC_company_amp_union')}}
+  FROM {{ ref('stg_PC_company_pr_union')}}
