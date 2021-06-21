@@ -1,22 +1,82 @@
-water_company_acronym,water_company_name,water_company_type, water_company_type_description
-ANH,Anglian Water,WaSC,water and sewerage company
-HDD,Hafren Dyfrdwy,WaSC,water and sewerage company
-NES,Northumbrian Water,WaSC,water and sewerage company
-SRN,Southern Water,WaSC,water and sewerage company
-SVE,Severn Trent Water,WaSC,water and sewerage company
-SVT,Severn Trent Water,WaSC,water and sewerage company
-SWT,South West Water,WaSC,water and sewerage company
-TMS,Thames Water,WaSC,water and sewerage company
-WSH,Dŵr Cymru,WaSC,water and sewerage company
-WSX,Wessex Water,WaSC,water and sewerage company
-YKY,Yorkshire Water,WaSC,water and sewerage company
-AFW,Affinity Water,WoC,water-only company
-BRL,Bristol Water,WoC,water-only company
-DVW,Dee Valley Water,WoC,water-only company
-PRT,Portsmouth Water,WoC,water-only company
-SBW,Bournemouth Water,WoC,water-only company
-SES,SES Water,WoC,water-only company
-SEW,South East Water,WoC,water-only company
-SSC,South Staffs Water,WoC,water-only company
-SWB,South West Water,WaSC,water and sewerage company
-UUW,United Utilities,WaSC,water and sewerage company
+water_company_name,water_company_acronym,water_company_type, water_company_type_description
+A Water and Sewerage Company,AWS,WASC,Water and Sewerage Company
+Anglian Water,ANG,WASC,Water and Sewerage Company
+Anglian Water Services,ANH,WASC,Water and Sewerage Company
+Northumbrian Water (NBN),NBN,WASC,Water and Sewerage Company
+Northumbrian Water Ltd,NES,WASC,Water and Sewerage Company
+Northumbrian Water (NNE),NNE,WASC,Water and Sewerage Company
+United Utilities Water Plc,UUW,WASC,Water and Sewerage Company
+Southern Water Services Ltd,SRN,WASC,Water and Sewerage Company
+Severn Trent Water Ltd (pre 2018 merger),SVT,WASC,Water and Sewerage Company
+South West Water Ltd,SWT,WASC,Water and Sewerage Company
+Thames Water Utilities Ltd,TMS,WASC,Water and Sewerage Company
+WASC,WASC,WASC,Water and Sewerage Company
+Dwr Cymru Cyfyngedig (Welsh),WSH,WASC,Water and Sewerage Company
+Wessex Water Services Ltd,WSX,WASC,Water and Sewerage Company
+Yorkshire Water,YKS,WASC,Water and Sewerage Company
+Yorkshire Water Services Ltd,YKY,WASC,Water and Sewerage Company
+Albion Water,ALB,WASC,Water and Sewerage Company
+Independent Water Networks Ltd,IWN,WASC,Water and Sewerage Company
+Peel Water Networks,PWN,WASC,Water and Sewerage Company
+Scottish & Southern Energy Water Limited,SSE,WASC,Water and Sewerage Company
+Veolia Water Projects Ltd,VWP,WASC,Water and Sewerage Company
+Thames Water (excluding Tideway),TBU,WASC,Water and Sewerage Company
+Thames Tideway Tunnel,TTT,WASC,Water and Sewerage Company
+Severn Trent Water Service,STS,WASC,Water and Sewerage Company
+South West Water (including Bournemouth),SWB,WASC,Water and Sewerage Company
+Albion Eco,ALE,WASC,Water and Sewerage Company
+Icosa Water Services,ICW,WASC,Water and Sewerage Company
+Bazalgette Tunnel Ltd (Tideway),BTL,WASC,Water and Sewerage Company
+Severn Trent England Ltd,SVE,WASC,Water and Sewerage Company
+Hafren Dyfrdwy Cyfyngedig,HDD,WASC,Water and Sewerage Company
+Powys site,PWY,WASC,Water and Sewerage Company
+Severn Trent Water excl. Powys and Chester,SXP,WASC,Water and Sewerage Company
+Hafren England CA,SVH,WASC,Water and Sewerage Company
+County Water Limited,CTY,WASC,Water and Sewerage Company
+A Water Only Company,AWO,WOC,Water Only Company
+Bristol Water plc,BRL,WOC,Water Only Company
+Bournemouth Water,BWH,WOC,Water Only Company
+Cambridge Water Company Plc,CAM,WOC,Water Only Company
+Chester Waterworks,CHR,WOC,Water Only Company
+Dee Valley Water Plc (pre 2018 merger),DVW,WOC,Water Only Company
+Essex & Suffolk Water,ESK,WOC,Water Only Company
+East Surrey Water,ESY,WOC,Water Only Company
+Folkstone and Dover,FLK,WOC,Water Only Company
+Hampshire Water,HMP,WOC,Water Only Company
+Hartlepool Water,HPL,WOC,Water Only Company
+Mid Kent Water,MKT,WOC,Water Only Company
+South East Water,MSE,WOC,Water Only Company
+Mid Southern Water,MSN,WOC,Water Only Company
+North East Water,NEW,WOC,Water Only Company
+North Surrey Water,NSY,WOC,Water Only Company
+Portsmouth Water Ltd,PRT,WOC,Water Only Company
+Sutton & East Surrey Water Ltd,SES,WOC,Water Only Company
+South East Water Ltd,SEW,WOC,Water Only Company
+South Staffordshire Water Plc,SST,WOC,Water Only Company
+South East Water,STE,WOC,Water Only Company
+Sutton & District,SUT,WOC,Water Only Company
+Tendring Hundred,THD,WOC,Water Only Company
+Three Valleys (TVN),TVN,WOC,Water Only Company
+Three Valleys (TVW),TVW,WOC,Water Only Company
+Veolia Water Central,VCE,WOC,Water Only Company
+Veolia Water East,VEA,WOC,Water Only Company
+Veolia Water Southeast,VSE,WOC,Water Only Company
+WOC,WOC,WOC,Water Only Company
+Wrexham Water,WRX,WOC,Water Only Company
+York Waterworks,YRK,WOC,Water Only Company
+Essex Water,ESX,WOC,Water Only Company
+Suffolk Water,SFK,WOC,Water Only Company
+East Worcester,EWR,WOC,Water Only Company
+Bournemouth & District,BRN,WOC,Water Only Company
+West Hampshire,WHP,WOC,Water Only Company
+Eastbourne Water,EBN,WOC,Water Only Company
+Mid Sussex Water,MSX,WOC,Water Only Company
+West Kent Water,WKT,WOC,Water Only Company
+Colne Valley,COV,WOC,Water Only Company
+Lee Valley,LEV,WOC,Water Only Company
+Rickmansworth,RKM,WOC,Water Only Company
+Cholderton & District Water Co Ltd,CHL,WOC,Water Only Company
+Affinity Water,AFW,WOC,Water Only Company
+South Staffordshire Cambridge,SSC,WOC,Water Only Company
+Chester site,CHS,WOC,Water Only Company
+Dee Valley Water excl. Powys and Chester,DXP,WOC,Water Only Company
