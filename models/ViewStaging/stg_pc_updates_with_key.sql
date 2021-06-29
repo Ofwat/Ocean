@@ -7,6 +7,9 @@
     renamed as (
         select {{dbt_utils.hash(dbt_utils.concat(['amp_name','OFWAT_Year','submission_status','unique_id','company_acronym']))}} pc_updates_id
         ,[updated_at]
+        ,[excel_file]
+        ,[excel_user]
+        ,[comment]
         ,[amp_name]
         ,[OFWAT_Year]
         ,[submission_status]

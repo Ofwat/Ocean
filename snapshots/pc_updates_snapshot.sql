@@ -9,7 +9,7 @@
     )
 }}
 
-    SELECT * from {{ ref('stg_pc_updates')}}
+    SELECT * from {{ ref('stg_pc_updates_with_key')}}
 
 {% endsnapshot %}
 
