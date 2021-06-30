@@ -1,10 +1,10 @@
 with source_update as (
-    select * from {{ source('nw', 'PR14FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14FinalCSVcreatedbyPython') }}
 )
 
 select unique_id
-    ,'2014-15' OFWAT_Year
-    ,'Estimate' submission_status
+    ,'2014-15' year
+    ,'Forecast' submission_status
     ,'PR14' price_review
     ,company_type
     ,company

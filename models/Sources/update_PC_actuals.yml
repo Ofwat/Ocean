@@ -1,0 +1,51 @@
+version: 2
+
+sources:
+  - name: generated_sources
+    schema: "{{ [context.target.schema,'generated_sources']|join('_') }}"
+    description: Actuals updates extracted from APR Outcomes data collection Excel model tables 3A, 3B and 3E.
+    tables:
+      - name: pc_actuals_updates
+        description: >
+          One record per order. Includes cancelled and deleted orders.
+        columns:
+          - name: updated_at
+            tests:
+              - not_null
+          - name: amp_name
+          - name: OFWAT_Year
+            tests:
+              - not_null
+              # - relationships:
+              #     to: ref('D_Date_OFWAT_table')
+              #     field: Ofwat_Year
+          - name: submission_status
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('D_Submission_status_table')
+                  field: submission_status_name
+          - name: unique_id
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('D_PC_company_pr_table')
+                  field: unique_id
+          - name: company_acronym
+            tests:
+              - not_null
+              - relationships:
+                  to: ref('D_Water_company_table')
+                  field: water_company_acronym
+          - name: company_name
+          - name: pcl
+            tests:
+          - name: pcl_met
+            tests:
+              - not_null
+              - accepted_values:
+                  values: ['No', 'Yes', '-']
+          - name: outperformance_or_underperformance_payment
+            tests:
+          - name: forecast_of_total_2020_25_outperformance_or_underperformance_payment
+            tests:

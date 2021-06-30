@@ -1,9 +1,9 @@
 with source_update as (
-    select * from {{ source('nw', 'PR14FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14FinalCSVcreatedbyPython') }}
 )
 select unique_id
     ,'2019-20' year
-    ,'Estimate' submission_status
+    ,'Forecast' submission_status
 	,'PR14' price_review
 	,company_type
 	,company

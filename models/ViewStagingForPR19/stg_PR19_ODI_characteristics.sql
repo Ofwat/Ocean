@@ -1,5 +1,5 @@
 with source_update as (
-select * from {{ source('nw', 'PR19FinalCSVcreatedbyPython') }}
+select * from {{ source('generated_sources', 'PR19FinalCSVcreatedbyPython') }}
 )
 SELECT distinct(odi_type)
 ,odi_form

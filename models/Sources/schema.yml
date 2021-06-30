@@ -1,7 +1,8 @@
 version: 2
 
 sources:
-  - name: nw
+  - name: generated_sources
+    schema: "{{ [context.target.schema,'generated_sources']|join('_') }}"
     description: The actual python file
     tables:
       - name: PR14FinalCSVcreatedbyPython

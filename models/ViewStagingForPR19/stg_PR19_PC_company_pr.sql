@@ -1,5 +1,5 @@
 with pr19 as (
-    select * from {{ source('nw', 'PR19FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR19FinalCSVcreatedbyPython') }}
 ),
 company as (
     select * from {{ ref('D_Water_company_table') }}

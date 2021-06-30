@@ -67,7 +67,7 @@ renamed as (
                 when [outperformance_payment_or_underperformance_payment_in_period_ODI] is not null then 'IN Period ODI'
                 else null end) = financialincentive.Incentive_Period
         left join odi_characteristics on isnull(Fpcaprunion.odi_form,'odi_characteristics') = isnull(odi_characteristics.odi_form,'odi_characteristics')
-        left join yeartable on yeartable.year = Fpcaprunion.Ofwat_Year
+        left join yeartable on yeartable.year = Fpcaprunion.year
         where Fpcaprunion.company is not null
 )
 
