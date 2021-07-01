@@ -16,9 +16,6 @@ element as (
 submission as (
     select * from {{ ref('D_Submission_status_table') }}
 ),
-odi_characteristics as (
-    select * from {{ ref('D_ODI_characteristics_table') }}
-),
 pr as (
     select * from {{ ref('D_Price_review_table') }}
 ),
@@ -38,7 +35,6 @@ renamed as (
     ,pccomppr.pc_company_pr_id
     ,Submission_status_id
     ,element.element_id
-    ,odi_characteristics.ODI_characteristics_id
     ,underp_payment_collar
     ,underp_payment_deadband
     ,outp_payment_deadband
@@ -66,7 +62,6 @@ renamed as (
                 (case when [notional_outperformance_payment_or_underperformance_payment_accrued] is not null then 'Notional Period'
                 when [outperformance_payment_or_underperformance_payment_in_period_ODI] is not null then 'IN Period ODI'
                 else null end) = financialincentive.Incentive_Period
-        left join odi_characteristics on isnull(Fpcaprunion.odi_form,'odi_characteristics') = isnull(odi_characteristics.odi_form,'odi_characteristics')
         left join yeartable on yeartable.year = Fpcaprunion.year
         where Fpcaprunion.company is not null
 )
