@@ -433,7 +433,6 @@ models:
                            For example: PR14AFWWSW_W-A1"
             tests:
               - unique
-            # - not_null
           - name: performance_commitment
             description: "Name from performance commitment table for mapping"
             tests:
@@ -454,27 +453,27 @@ models:
             description: "Up if an increase in the numeric value or score means a better (improving) performance
                           Down if a decrease in the numeric value or score means a better (improving) performance
                           Blank if neither of the above apply"
-          - name: drinking_water_quality_compliance
+          - name: PR14_comparative_drinking_water_compliance
             description: "Yes if the PC was included in the PR14 comparative assessment of drinking water quality compliance PCs, otherwise blank"
             tests:
               - accepted_values:
                   values: ['TRUE']
-          - name: water_quality_contacts
+          - name: PR14_comparative_water_quality_contacts
             description: "Yes if the PC was included in the PR14 comparative assessment of water quality contacts PCs, otherwise blank"
             tests:
               - accepted_values:
                   values: ['TRUE']
-          - name: supply_interruptions_3_hours
+          - name: PR14_comparative_supply_interruptions_3_hours
             description: "Yes if the PC was included in the PR14 comparative assessment of supply interruptions (>3 hours) PCs, otherwise blank"
             tests:
               - accepted_values:
                   values: ['TRUE']
-          - name: pollution_incidents_cat_3
+          - name: PR14_comparative_pollution_incidents_cat_3
             description: "Yes if the PC was included in the PR14 comparative assessment of pollution incidents (category 3) PCs, otherwise blank"
             tests:
               - accepted_values:
                   values: ['TRUE']
-          - name: internal_sewer_flooding
+          - name: PR14_comparative_internal_sewer_flooding
             description: "Yes if the PC was included in the PR14 comparative assessment of internal sewer flooding PCs, otherwise blank"
             tests:
               - accepted_values:
@@ -684,7 +683,7 @@ models:
               - unique
               - not_null
               - accepted_values:
-                  values: ['Drafted','Actual','Forcast','OFWAT_Intervention','Estimate']
+                  values: ['Actual','Forecast','Past performance','Shadow']
           - name: submission_status_description
             description: "submission status description"
             tests:

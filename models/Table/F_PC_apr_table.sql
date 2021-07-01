@@ -5,7 +5,7 @@ company as (
     select * from {{ ref('D_Water_company_table') }}
 ),
 pccomppr as (
-    select * from {{ ref('stg_PC_company_pr_union') }}
+    select * from {{ ref('D_PC_company_pr') }}
 ),
 financialincentive as (
     select * from {{ ref('D_Financial_incentive_type_table') }}
