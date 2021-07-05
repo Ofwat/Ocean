@@ -1,5 +1,5 @@
 with Fpcaprunion as (
-    select * from {{ ref('stg_F_pc_apr_union') }}
+    select * from {{ ref('stg_F_pc_apr_updated') }}
 ),
 company as (
     select * from {{ ref('D_Water_company_table') }}
