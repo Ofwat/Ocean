@@ -15,7 +15,7 @@ pr as (
     select * from {{ ref('D_Price_review_table') }}
 ),
 odi_characteristics as (
-    select * from {{ ref('D_ODI_characteristics_table') }}
+    select * from {{ ref('stg_PR14_ODI_characteristics') }}
 ),
 final as (
     select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.performance_commitment','pc.primary_category']))}} pc_company_pr_id
@@ -26,7 +26,9 @@ final as (
     ,unique_id
     ,outcome
     ,PC_ref
-    ,odi_characteristics.ODI_characteristics_id
+    ,odi_characteristics.odi_type
+    ,odi_characteristics.odi_form
+    ,CAST(NULL as varchar(max)) as  odi_timing
     ,CAST(NULL as varchar(max)) as common_comparable_bespoke_performance_commitment
     ,annex
     ,direction_of_improving_performance
@@ -90,7 +92,7 @@ final as (
         and isnull(pr14.primary_category,'primary_category') = isnull(pc.primary_category,'primary_category')
         left join company on isnull(pr14.company,'company') = isnull(company.water_company_acronym,'company')
         cross join pr
-        left join odi_characteristics on isnull(pr14.odi_form,'odi_form') = isnull(odi_characteristics.odi_form,'odi_form')
+    left join odi_characteristics on isnull(pr14.odi_form,'odi_form') = isnull(odi_characteristics.odi_form,'odi_form')
             and isnull(pr14.odi_type,'odi_type') = isnull(odi_characteristics.odi_type,'odi_type')
         where pr.price_review = 'PR14' and unique_id is not null
 )

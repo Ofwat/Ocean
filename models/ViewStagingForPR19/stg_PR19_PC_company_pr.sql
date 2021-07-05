@@ -11,7 +11,7 @@ pr as (
     select * from {{ ref('D_Price_review_table') }}
 ),
 odi_characteristics as (
-    select * from {{ ref('D_ODI_characteristics_table') }}
+    select * from {{ ref('stg_PR19_ODI_characteristics') }}
 ),
 
 final as (
@@ -23,7 +23,9 @@ final as (
     ,unique_id
     ,outcome
     ,PC_ref
-    ,odi_characteristics.ODI_characteristics_id
+    ,odi_characteristics.odi_type
+    ,odi_characteristics.odi_form
+    ,odi_characteristics.odi_timing
     ,common_and_comparable_bespoke_performance_commitment
     ,CAST(NULL as varchar(max)) as annex
     ,direction_of_improving_performance

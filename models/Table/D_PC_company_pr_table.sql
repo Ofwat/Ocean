@@ -6,7 +6,9 @@ SELECT pc_company_pr_id
     ,unique_id
     ,outcome
     ,PC_ref
-    ,ODI_characteristics_id
+    ,odi_type
+    ,odi_form
+    ,odi_timing
     ,common_comparable_bespoke_performance_commitment
     ,annex
     ,direction_of_improving_performance

@@ -44,7 +44,7 @@ sources:
             tests:
               - not_null
               - accepted_values:
-                  values: ['No', 'Yes', '-','nan']
+                  values: ['No','Yes', NULL]
           - name: outperformance_or_underperformance_payment
             tests:
           - name: forecast_of_total_2020_25_outperformance_or_underperformance_payment

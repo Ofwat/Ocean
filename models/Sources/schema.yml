@@ -364,9 +364,6 @@ models:
             tests:
               - unique
               - not_null
-              # - relationships:
-              #     to: ref('F_PC_apr_table')
-              #     field: ODI_characteristics_id
           - name: odi_type
             description: "Odi type"
             tests:
@@ -413,7 +410,6 @@ models:
             description: "Unique ids for the row combintion of Performance commitment, company and amp"
             tests:
               - not_null
-              # - unique
           - name: performance_commitment_id
             description: "Id from performance commitment table for mapping"
             tests:
@@ -582,12 +578,6 @@ models:
               - relationships:
                   to: ref('D_Element_table')
                   field: element_id
-          - name: ODI_characteristics_id
-            description: "odi characteristics id"
-            tests:
-              - relationships:
-                  to: ref('D_ODI_characteristics_table')
-                  field: ODI_characteristics_id
           - name: underp_payment_collar
             description: "underperformance payment collar"
           - name: underp_payment_deadband
@@ -659,7 +649,6 @@ models:
           - name: water_company_name
             description: "Company names"
             tests:
-              - unique
               - not_null 
           - name: water_company_type
             description: "Type of company WaSC or WoC"
@@ -683,7 +672,7 @@ models:
               - unique
               - not_null
               - accepted_values:
-                  values: ['Actual','Forecast','Past performance','Shadow']
+                  values: ['Drafted','Actual','Forecast','OFWAT_Intervention','Past performance','Shadow']
           - name: submission_status_description
             description: "submission status description"
             tests:
