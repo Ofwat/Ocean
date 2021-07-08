@@ -42,10 +42,12 @@ renamed as (
     ,pcl 
     ,pcl_met
     ,enhanced_underp_payment_collar
+    ,enhanced_outp_payment_cap
     ,performance_level_actual pcl_Actual
     ,isnumeric(performance_level_actual) numeric_pcl_actual
     ,case when isnumeric(performance_level_actual) =1 then performance_level_actual 
     else null end numeric_derived_pcl_actual
+    ,financial_odi
     ,financialincentive.financial_incentive_id
     ,coalesce([notional_outperformance_payment_or_underperformance_payment_accrued_GBPm],
     [outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm]) financial_incentive_payment_GBPm

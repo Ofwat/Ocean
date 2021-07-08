@@ -1,26 +1,35 @@
-name: demo_dbt
+name: *******
 version: 1.0
 
 macro-paths: ["macros"]
 
-demo_dbt:
-  target: dev
+*******:
+  target: powerbienv
   outputs:
     dev:
       type: sqlserver
-      driver: 'ODBC Driver 17 for SQL Server' 
-      server: '***********'
-      port: 1433
-      user: **********
-      password: **********
-      database: Ocean
-      schema: *Please enter your own schemas references*
-    production:
+      driver: ODBC Driver 17 for SQL Server
+      server: *********************
+      port: ****
+      user: ***********
+      password: ***********
+      database: *******
+      schema: **
+    powerbienv:
       type: sqlserver
       driver: 'ODBC Driver 17 for SQL Server' 
-      server: '***********'
-      port: 1433
-      user: **********
-      password: **********
-      database: Ocean
-      schema: dw
+      server: '*********************'
+      port: ****
+      user: ***********
+      password: ***********
+      database: *******
+      schema: ***
+    poduction:
+      type: sqlserver
+      driver: 'ODBC Driver 17 for SQL Server' 
+      server: '*********************'
+      port: ****
+      user: ***********
+      password: ***********
+      database: *******
+      schema: **
