@@ -2,6 +2,7 @@ with source_update as (
     select * from {{ source('generated_sources', 'PR14SubmeasureFinalCSVcreatedbyPython') }}
 )
 select unique_id
+,sub_measure_id
 ,sub_measure_category
 ,sub_measure
 ,'2015-16' year

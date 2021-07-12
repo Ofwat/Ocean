@@ -22,13 +22,12 @@ final as (
     ,pr.price_review
     ,pc.performance_commitment_id
     ,pc.performance_commitment
+    ,CAST(NULL as varchar(max)) as  pc_short_description
     ,company.water_company_id
     ,unique_id
     ,outcome
     ,PC_ref
-    ,odi_characteristics.odi_type
-    ,odi_characteristics.odi_form
-    ,CAST(NULL as varchar(max)) as  odi_timing
+    ,odi_characteristics.ODI_characteristics_id
     ,CAST(NULL as varchar(max)) as common_comparable_bespoke_performance_commitment
     ,annex
     ,direction_of_improving_performance

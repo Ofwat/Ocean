@@ -19,13 +19,12 @@ final as (
     ,pr.price_review
     ,pc.performance_commitment_id
     ,pc.performance_commitment
+    ,pc.pc_short_description
     ,company.water_company_id
     ,unique_id
     ,outcome
     ,PC_ref
-    ,odi_characteristics.odi_type
-    ,odi_characteristics.odi_form
-    ,odi_characteristics.odi_timing
+    ,odi_characteristics.ODI_characteristics_id
     ,common_and_comparable_bespoke_performance_commitment
     ,CAST(NULL as varchar(max)) as annex
     ,direction_of_improving_performance
@@ -86,6 +85,7 @@ final as (
         and isnull(pr19.pc_unit_description,'pc_unit_description') = isnull(pc.pc_unit_description,'pc_unit_description')
         and isnull(pr19.decimal_places,'decimal_places') = isnull(pc.decimal_places,'decimal_places')
         and isnull(pr19.primary_category,'primary_category') = isnull(pc.primary_category,'primary_category')
+        and isnull(pr19.pc_short_description,'pc_short_description') = isnull(pc.pc_short_description,'pc_short_description')
         left join company on isnull(pr19.company,'company') = isnull(company.water_company_acronym,'company')
         cross join pr
         left join odi_characteristics on isnull(pr19.odi_form,'odi_form') = isnull(odi_characteristics.odi_form,'odi_form')

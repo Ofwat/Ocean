@@ -3,7 +3,7 @@ with submeasure as (
 ),
 
 final as (
-    select {{dbt_utils.hash(dbt_utils.concat(['submeasure.unique_id']))}} [D_sub_measure_id]
+    select {{dbt_utils.hash(dbt_utils.concat(['submeasure.unique_id','sub_measure_id']))}} [D_sub_measure_id]
     ,unique_id
     ,company_type
     ,company
