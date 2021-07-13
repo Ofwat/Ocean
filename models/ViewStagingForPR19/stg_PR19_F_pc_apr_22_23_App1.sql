@@ -2,9 +2,10 @@ with source_update as (
     select * from {{ source('generated_sources', 'PR19FinalCSVcreatedbyPython') }}
 )
 select unique_id
-,'2020-21' year
+,'2022-23' year
 ,'Forecast' submission_status
 ,'PR19' price_review
+,'App1' sheet
 ,CAST(NULL as varchar(max)) as company_type
 ,company
 ,CAST(NULL as varchar(max)) as element_name
@@ -27,20 +28,19 @@ select unique_id
 ,CAST(NULL as varchar(max)) as notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
 ,CAST(NULL as varchar(max)) as outperformance_payment_or_underperformance_payment_in_period_ODI
 ,CAST(NULL as varchar(max)) as outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-,[pcl_2020_21] pcl
+,[pcl_2022_23] pcl
 ,CAST(NULL as varchar(max)) as pcl_met
 ,CAST(NULL as varchar(max)) as performance_level_actual
 ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
 ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-,[financial_odi_2020_21] financial_odi
+,[financial_odi_2022_23] financial_odi
 ,CAST(NULL as varchar(max)) as underp_payment_collar
 ,CAST(NULL as varchar(max)) as underp_payment_deadband
 ,CAST(NULL as varchar(max)) as outp_payment_deadband
 ,CAST(NULL as varchar(max)) as outp_payment_cap
-,[enhanced_underp_payment_collar_2020_21] enhanced_underp_payment_collar
-,[standard_underp_payment_collar_2020_21] standard_underp_payment_collar
-,[standard_outp_payment_cap_2020_21] standard_outp_payment_cap
-,[standard_outp_payment_cap_2020_21] enhanced_outp_payment_cap
+,[enhanced_underp_payment_collar_2022_23] enhanced_underp_payment_collar
+,[standard_underp_payment_collar_2022_23] standard_underp_payment_collar
+,[standard_outp_payment_cap_2022_23] standard_outp_payment_cap
+,[standard_outp_payment_cap_2022_23] enhanced_outp_payment_cap
 from source_update
-where  unique_id is not null
-                        
+where unique_id is not null

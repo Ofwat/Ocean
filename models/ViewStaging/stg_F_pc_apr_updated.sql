@@ -11,6 +11,7 @@
             ,updates.submission_status as update_submission_status
             ,amp6amp7base.[price_review]
             ,amp6amp7base.[company_type]
+            ,amp6amp7base.sheet
             ,updates.company_acronym as company
             ,amp6amp7base.[element_name]
             ,amp6amp7base.[element_acronym]
@@ -59,6 +60,7 @@
             ,updates.submission_status as update_submission_status
             ,amp6amp7base.[price_review]
             ,amp6amp7base.[company_type]
+            ,amp6amp7base.sheet
             ,updates.company_acronym as company
             ,amp6amp7base.[element_name]
             ,amp6amp7base.[element_acronym]
@@ -97,7 +99,6 @@
         FROM amp6amp7base 
         inner join updates 
 		on updates.unique_id = amp6amp7base.unique_id
-        -- and updates.OFWAT_Year <> amp6amp7base.year
         and updates.company_acronym = amp6amp7base.company
 		and updates.submission_status = 'Past performance'
     ),

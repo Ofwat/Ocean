@@ -14,12 +14,22 @@ select * from {{ ref('stg_PR14_F_pc_apr_19_20_estimate')}}
 union 
 select * from {{ ref('stg_PR14_F_pc_apr_19_20')}}
 union
-select * from {{ ref('stg_PR19_F_pc_apr_20_21')}}
+select * from {{ ref('stg_PR19_F_pc_apr_20_21_App1')}}
 union
-select * from {{ ref('stg_PR19_F_pc_apr_21_22')}}
+select * from {{ ref('stg_PR19_F_pc_apr_21_22_App1')}}
 union
-select * from {{ ref('stg_PR19_F_pc_apr_22_23')}}
+select * from {{ ref('stg_PR19_F_pc_apr_22_23_App1')}}
 union
-select * from {{ ref('stg_PR19_F_pc_apr_23_24')}}
+select * from {{ ref('stg_PR19_F_pc_apr_23_24_App1')}}
 union
-select * from {{ ref('stg_PR19_F_pc_apr_24_25')}}
+select * from {{ ref('stg_PR19_F_pc_apr_24_25_App1')}}
+union
+select * from {{ ref('stg_PR19_F_pc_apr_20_21_App1b')}}
+union
+select * from {{ ref('stg_PR19_F_pc_apr_21_22_App1b')}}
+union
+select * from {{ ref('stg_PR19_F_pc_apr_22_23_App1b')}}
+union
+select * from {{ ref('stg_PR19_F_pc_apr_23_24_App1b')}}
+union
+select * from {{ ref('stg_PR19_F_pc_apr_24_25_App1b')}}

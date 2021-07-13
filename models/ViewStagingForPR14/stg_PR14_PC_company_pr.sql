@@ -19,6 +19,7 @@ odi_characteristics as (
 ),
 final as (
     select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.performance_commitment','pc.primary_category']))}} pc_company_pr_id
+    ,'PC list' sheet
     ,pr.price_review
     ,pc.performance_commitment_id
     ,pc.performance_commitment

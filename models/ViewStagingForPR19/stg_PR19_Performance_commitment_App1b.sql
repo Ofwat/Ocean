@@ -9,6 +9,7 @@ select  {{dbt_utils.hash(dbt_utils.concat(['performance_commitment','primary_cat
     ,pc_unit_description pc_unit_description
     ,decimal_places decimal_places
     ,pc_short_description
+    ,'App1b' sheet
     from (select performance_commitment
         ,primary_category
         ,pc_unit

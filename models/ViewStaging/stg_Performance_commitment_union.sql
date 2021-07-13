@@ -1,3 +1,5 @@
 select * from {{ ref('stg_PR14_Performance_commitment') }}
 union 
-select * from {{ ref('stg_PR19_Performance_commitment') }}
+select * from {{ ref('stg_PR19_Performance_commitment_App1') }}
+union 
+select * from {{ ref('stg_PR19_Performance_commitment_App1b') }}

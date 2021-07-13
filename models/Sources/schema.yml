@@ -6,7 +6,7 @@ sources:
     description: The actual python file
     tables:
       - name: PR14FinalCSVcreatedbyPython
-        description: One record per order. Includes cancelled and deleted orders.
+        description: PR14 sheet data.
         columns:
           - name: unique_id
           - name: company_type
@@ -208,7 +208,106 @@ sources:
           - name: actual_performance_compared_with_previous_actual_performance_2018_19_to_2019_20
           - name: actual_performance_compared_with_previous_actual_performance_2014_15_to_2016_17_amp_so_far
       - name: PR19FinalCSVcreatedbyPython
-        description: pr19 sub measures
+        description: pr19 sheet data
+        columns:
+          - name: company
+          - name: unique_id
+          - name: outcome
+          - name: pc_ref
+          - name: performance_commitment pc_name
+          - name: pc_short_description
+          - name: price_control_allocation_water_resources
+          - name: price_control_allocation_water_network_plus
+          - name: price_control_allocation_wastewater_network_plus
+          - name: price_control_allocation_bioresources_sludge
+          - name: price_control_allocation_residential_retail
+          - name: price_control_allocation_business_retail
+          - name: price_control_allocation_direct_procurement_for_customers
+          - name: price_control_allocation_dummy_control
+          - name: odi_type
+          - name: odi_form
+          - name: odi_timing
+          - name: primary_category
+          - name: pc_unit
+          - name: pc_unit_description
+          - name: decimal_places
+          - name: direction_of_improving_performance
+          - name: common_and_comparable_bespoke_performance_commitment
+          - name: special_cost_factor
+          - name: scheme_specific_factor
+          - name: asset_health
+          - name: nep
+          - name: aim
+          - name: customers_relative_priority
+          - name: pcl_2020_21
+          - name: pcl_2021_22
+          - name: pcl_2022_23
+          - name: pcl_2023_24
+          - name: pcl_2024_25
+          - name: financial_odi_2020_21
+          - name: financial_odi_2021_22
+          - name: financial_odi_2022_23
+          - name: financial_odi_2023_24
+          - name: financial_odi_2024_25
+          - name: enhanced_underp_payment_collar_2020_21
+          - name: enhanced_underp_payment_collar_2021_22
+          - name: enhanced_underp_payment_collar_2022_23
+          - name: enhanced_underp_payment_collar_2023_24
+          - name: enhanced_underp_payment_collar_2024_25
+          - name: standard_underp_payment_collar_2020_21
+          - name: standard_underp_payment_collar_2021_22
+          - name: standard_underp_payment_collar_2022_23
+          - name: standard_underp_payment_collar_2023_24
+          - name: standard_underp_payment_collar_2024_25
+          - name: underp_payment_deadband_2020_21
+          - name: underp_payment_deadband_2021_22
+          - name: underp_payment_deadband_2022_23
+          - name: underp_payment_deadband_2023_24
+          - name: underp_payment_deadband_2024_25
+          - name: outp_payment_deadband_2020_21
+          - name: outp_payment_deadband_2021_22
+          - name: outp_payment_deadband_2022_23
+          - name: outp_payment_deadband_2023_24
+          - name: outp_payment_deadband_2024_25
+          - name: standard_outp_payment_cap_2020_21
+          - name: standard_outp_payment_cap_2021_22
+          - name: standard_outp_payment_cap_2022_23
+          - name: standard_outp_payment_cap_2023_24
+          - name: standard_outp_payment_cap_2024_25
+          - name: enhanced_outp_payment_cap_2020_21
+          - name: enhanced_outp_payment_cap_2021_22
+          - name: enhanced_outp_payment_cap_2022_23
+          - name: enhanced_outp_payment_cap_2023_24
+          - name: enhanced_outp_payment_cap_2024_25
+          - name: underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: underp_payment_incentive_enhanced_underp_payment
+          - name: outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: outp_payment_incentive_enhanced_outp_payment
+          - name: standard_odi_cal
+          - name: standard_odi_operand
+          - name: standard_odi_operand_note
+          - name: isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: isnumeric_underp_payment_incentive_enhanced_underp_payment
+          - name: onlynumeric_underp_payment_incentive_enhanced_underp_payment
+          - name: isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: isnumeric_outp_payment_incentive_enhanced_outp_payment
+          - name: onlynumeric_outp_payment_incentive_enhanced_outp_payment
+      - name: PR19App1bCSVcreatedbyPython
+        description: pr19 App1b sheet data
         columns:
           - name: company
           - name: unique_id

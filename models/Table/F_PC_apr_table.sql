@@ -27,6 +27,7 @@ yeartable as (
 ),
 renamed as (
     select yeartable.year
+    ,Fpcaprunion.sheet
     ,yeartable.year_id
     ,Fpcaprunion.price_review
     ,Fpcaprunion.submission_status
