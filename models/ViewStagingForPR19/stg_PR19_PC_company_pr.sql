@@ -5,18 +5,17 @@ company as (
     select * from {{ ref('D_Water_company_table') }}
 ),
 pc as (
-    select * from {{ ref('stg_PR19_Performance_commitment_App1') }}
+    select * from {{ ref('stg_PR19_Performance_commitment') }}
 ),
 pr as (
     select * from {{ ref('D_Price_review_table') }}
 ),
 odi_characteristics as (
-    select * from {{ ref('stg_PR19_ODI_characteristics_App1') }}
+    select * from {{ ref('stg_PR19_ODI_characteristics') }}
 ),
 
 final as (
     select {{dbt_utils.hash(dbt_utils.concat(['unique_id','pc.performance_commitment','pc.primary_category']))}} pc_company_pr_id
-    ,'App1' sheet
     ,pr.price_review
     ,pc.performance_commitment_id
     ,pc.performance_commitment

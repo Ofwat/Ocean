@@ -9,7 +9,6 @@ select  {{dbt_utils.hash(dbt_utils.concat(['pc_name','primary_category','pc_unit
     ,pc_unit_description pc_unit_description
     ,decimal_places decimal_places
     ,CAST(NULL as varchar(max)) as pc_short_description
-    ,'PC list' sheet
     from (select ltrim(right(performance_commitment, len(performance_commitment) - charindex(':',performance_commitment))) pc_name
         ,primary_category
         ,pc_unit

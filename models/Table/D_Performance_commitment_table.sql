@@ -5,5 +5,4 @@ SELECT performance_commitment_id
       ,pc_unit_description
       ,decimal_places
       ,pc_short_description
-      ,sheet
   FROM {{ref('stg_Performance_commitment_union') }}
