@@ -39,10 +39,12 @@ renamed as (
     ,underp_payment_deadband
     ,outp_payment_deadband
     ,outp_payment_cap
-    ,pcl 
-    ,pcl_met
     ,enhanced_underp_payment_collar
     ,enhanced_outp_payment_cap
+    ,standard_underp_payment_collar
+    ,standard_outp_payment_cap
+    ,pcl 
+    ,pcl_met
     ,performance_level_actual pcl_Actual
     ,isnumeric(performance_level_actual) numeric_pcl_actual
     ,case when isnumeric(performance_level_actual) =1 then performance_level_actual 
