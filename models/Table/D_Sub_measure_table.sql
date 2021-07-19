@@ -1,5 +1,5 @@
 with submeasure as (
-    select * from {{ source('generated_sources', 'PR14SubmeasureFinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14BaseSubmeasureCSVcreatedbyPython') }}
 ),
 
 final as (

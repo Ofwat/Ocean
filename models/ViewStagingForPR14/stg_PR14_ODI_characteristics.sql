@@ -1,5 +1,5 @@
 with source_update as (
-    select * from {{ source('generated_sources', 'PR14FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14BaseCSVcreatedbyPython') }}
 )
 SELECT odi_type
     ,{{dbt_utils.hash(dbt_utils.concat(['odi_type','odi_form']))}} ODI_characteristics_id

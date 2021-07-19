@@ -1,5 +1,5 @@
 with pr14 as (
-    select * from {{ source('generated_sources', 'PR14FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14BaseCSVcreatedbyPython') }}
 )
 
 select  {{dbt_utils.hash(dbt_utils.concat(['pc_name','primary_category','pc_unit','pc_unit_description','decimal_places']))}} performance_commitment_id

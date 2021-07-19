@@ -1,5 +1,5 @@
 with source_update as (
-    select * from {{ source('generated_sources', 'PR19FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR19App1CSVcreatedbyPython') }}
 )
 select unique_id
 ,'2021-22' year

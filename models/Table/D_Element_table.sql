@@ -1,5 +1,5 @@
 with source_update as (
-    select * from {{ source('generated_sources', 'PR14FinalCSVcreatedbyPython') }}
+    select * from {{ source('generated_sources', 'PR14BaseCSVcreatedbyPython') }}
 )
 
 select  {{dbt_utils.hash(dbt_utils.concat(['element_acronym','element_name']))}} element_id

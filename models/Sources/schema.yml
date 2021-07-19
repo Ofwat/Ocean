@@ -5,7 +5,7 @@ sources:
     schema: "{{ [context.target.schema,'generated_sources']|join('_') }}"
     description: The actual python file
     tables:
-      - name: PR14FinalCSVcreatedbyPython
+      - name: PR14BaseCSVcreatedbyPython
         description: PR14 sheet data.
         columns:
           - name: unique_id
@@ -140,7 +140,7 @@ sources:
           - name: onlynumeric_underp_payment4_incentive_rate_gbpm
           - name: onlynumeric_outp_payment1_incentive_rate_gbpm
           - name: onlynumeric_outp_payment2_incentive_rate_gbpm
-      - name: PR14SubmeasureFinalCSVcreatedbyPython
+      - name: PR14BaseSubmeasureCSVcreatedbyPython
         description: pr14 sub measures
         columns:
           - name: unique_id
@@ -207,7 +207,7 @@ sources:
           - name: actual_performance_compared_with_previous_actual_performance_2017_18_to_2018_19
           - name: actual_performance_compared_with_previous_actual_performance_2018_19_to_2019_20
           - name: actual_performance_compared_with_previous_actual_performance_2014_15_to_2016_17_amp_so_far
-      - name: PR19FinalCSVcreatedbyPython
+      - name: PR19App1CSVcreatedbyPython
         description: pr19 sheet data
         columns:
           - name: company
