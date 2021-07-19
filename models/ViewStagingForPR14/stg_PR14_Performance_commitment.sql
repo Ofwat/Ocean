@@ -3,6 +3,7 @@ with pr14 as (
 )
 
 select  {{dbt_utils.hash(dbt_utils.concat(['pc_name','primary_category','pc_unit','pc_unit_description','decimal_places']))}} performance_commitment_id
+    ,'PC list' sheet
     ,pc_name performance_commitment
     ,primary_category primary_category
     ,pc_unit pc_unit

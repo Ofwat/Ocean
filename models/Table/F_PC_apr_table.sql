@@ -55,17 +55,23 @@ renamed as (
     ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
     ,Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
     from Fpcaprunion 
-        left join company  on isnull(Fpcaprunion.company,'company') = isnull(company.water_company_acronym,'company')
-        left join pccomppr on isnull(Fpcaprunion.unique_id,'unique_id') = isnull(pccomppr.unique_id,'unique_id')
-        left join element on isnull(Fpcaprunion.element_acronym,'element_acronym') = isnull(element.element_acronym,'element_acronym')
-        left join submission on isnull(Fpcaprunion.submission_status,'submission_status') = isnull(submission.submission_status_name,'submission_status')
-        left join financialincentive on coalesce([notional_outperformance_payment_or_underperformance_payment_accrued],
+        left join company 
+            on isnull(Fpcaprunion.company,'company') = isnull(company.water_company_acronym,'company')
+        left join pccomppr
+            on isnull(Fpcaprunion.unique_id,'unique_id') = isnull(pccomppr.unique_id,'unique_id')
+            and isnull(Fpcaprunion.sheet,'sheet') = isnull(pccomppr.sheet,'sheet')
+        left join element
+            on isnull(Fpcaprunion.element_acronym,'element_acronym') = isnull(element.element_acronym,'element_acronym')
+        left join submission
+            on isnull(Fpcaprunion.submission_status,'submission_status') = isnull(submission.submission_status_name,'submission_status')
+        left join financialincentive
+            on coalesce([notional_outperformance_payment_or_underperformance_payment_accrued],
                 [outperformance_payment_or_underperformance_payment_in_period_ODI]) = financialincentive.financial_incentive_type
-                and 
-                (case when [notional_outperformance_payment_or_underperformance_payment_accrued] is not null then 'Notional Period'
+            and (case when [notional_outperformance_payment_or_underperformance_payment_accrued] is not null then 'Notional Period'
                 when [outperformance_payment_or_underperformance_payment_in_period_ODI] is not null then 'IN Period ODI'
                 else null end) = financialincentive.Incentive_Period
-        left join yeartable on yeartable.year = Fpcaprunion.year
+        left join yeartable
+            on yeartable.year = Fpcaprunion.year
         where Fpcaprunion.company is not null
 )
 
