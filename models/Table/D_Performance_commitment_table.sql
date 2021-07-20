@@ -1,5 +1,4 @@
 SELECT performance_commitment_id
-,sheet
 ,performance_commitment
 ,primary_category
 ,pc_unit

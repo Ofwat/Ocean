@@ -534,8 +534,8 @@ models:
               - relationships:
                   to: ref('D_Performance_commitment')
                   field: performance_commitment
-          - name: common_comparable_bespoke_performance_commitment
-            description: "common_comparable_bespoke_performance_commitment"
+          - name: common_and_comparable_bespoke_performance_commitment
+            description: "common_and_comparable_bespoke_performance_commitment"
           - name: special_cost_factor
             description: "special_cost_factor"
           - name: outcome

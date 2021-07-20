@@ -23,13 +23,14 @@ final as (
     ,pr.price_review
     ,pc.performance_commitment_id
     ,pc.performance_commitment
+    ,pc.primary_category
     ,CAST(NULL as varchar(max)) as  pc_short_description
     ,company.water_company_id
     ,unique_id
     ,outcome
     ,PC_ref
     ,odi_characteristics.ODI_characteristics_id
-    ,CAST(NULL as varchar(max)) as common_comparable_bespoke_performance_commitment
+    ,CAST(NULL as varchar(max)) as common_and_comparable_bespoke_performance_commitment
     ,annex
     ,direction_of_improving_performance
     ,PR14_comparative_drinking_water_compliance
