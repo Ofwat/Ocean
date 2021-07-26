@@ -14,7 +14,7 @@ with pr19 as (
     ,outcome
     ,PC_ref
     ,ODI_characteristics_id
-    ,common_and_comparable_bespoke_performance_commitment
+    ,common_and_comparable_bespoke_performance_commitment as common_comparable_bespoke_performance_commitment
     ,annex
     ,direction_of_improving_performance
     ,PR14_comparative_drinking_water_compliance

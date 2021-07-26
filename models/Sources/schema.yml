@@ -414,9 +414,6 @@ models:
             tests:
               - unique
               - not_null
-              # - relationships:
-              #     to: ref('F_PC_apr_table')
-              #     field: element_id
           - name: element_name
             description: "Name of Element"
             tests:
@@ -438,7 +435,6 @@ models:
               - unique
               - not_null
           - name: financial_incentive_type
-          # There are records which have notype but has incentive_period
             description: "This column applies to ODIs that are payable at the end of AMP6
                         Outperformance payment - an outperformance payment has accrued at 31 March
                         Underperformance payment - an underperformance payment has accrued at 31 March
@@ -526,8 +522,6 @@ models:
                            Ofwat Fountain database and has been generated as follows:
                            PR14 + water company acronym + element acronym + _ + PC reference
                            For example: PR14AFWWSW_W-A1"
-            tests:
-              - unique
           - name: performance_commitment
             description: "Name from performance commitment table for mapping"
             tests:
