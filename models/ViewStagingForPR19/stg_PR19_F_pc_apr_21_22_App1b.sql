@@ -35,12 +35,12 @@ select unique_id
 ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
 ,[financial_odi_2021_22] financial_odi
 ,CAST(NULL as varchar(max)) as underp_payment_collar
-,CAST(NULL as varchar(max)) as underp_payment_deadband
-,CAST(NULL as varchar(max)) as outp_payment_deadband
+,[underp_payment_deadband_2021_22] underp_payment_deadband
+,[outp_payment_deadband_2021_22] outp_payment_deadband
 ,CAST(NULL as varchar(max)) as outp_payment_cap
 ,[enhanced_underp_payment_collar_2021_22] enhanced_underp_payment_collar
 ,[standard_underp_payment_collar_2021_22] standard_underp_payment_collar
 ,[standard_outp_payment_cap_2021_22] standard_outp_payment_cap
-,[standard_outp_payment_cap_2021_22] enhanced_outp_payment_cap
+,[enhanced_outp_payment_cap_2021_22] enhanced_outp_payment_cap
 from source_update
 where  unique_id is not null

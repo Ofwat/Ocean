@@ -27,7 +27,7 @@ final as (
     ,outcome
     ,PC_ref
     ,odi_characteristics.ODI_characteristics_id
-    ,common_and_comparable_bespoke_performance_commitment
+    ,common_and_comparable_bespoke_performance_commitment as common_comparable_bespoke_performance_commitment
     ,CAST(NULL as varchar(max)) as annex
     ,direction_of_improving_performance
     ,CAST(NULL as varchar(max)) as PR14_comparative_drinking_water_compliance

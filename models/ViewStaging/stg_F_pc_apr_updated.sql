@@ -8,7 +8,7 @@
 	actuals_updates as (
         SELECT updates.[unique_id]
             ,updates.OFWAT_Year AS year
-            ,updates.submission_status as update_submission_status
+            ,updates.submission_status as submission_status
             ,amp6amp7base.[price_review]
             ,amp6amp7base.[company_type]
             ,amp6amp7base.sheet
@@ -33,9 +33,9 @@
             ,amp6amp7base.[notional_outperformance_payment_or_underperformance_payment_accrued_GBPm]
             ,amp6amp7base.[outperformance_payment_or_underperformance_payment_in_period_ODI]
             ,updates.outperformance_or_underperformance_payment AS outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-            ,updates.pcl AS pcl
+            ,null as pcl
             ,updates.pcl_met AS pcl_met
-            ,amp6amp7base.[performance_level_actual]
+            ,updates.pcl as performance_level_actual
             ,amp6amp7base.Total_AMP6_outperformance_payment_or_underperformance_payment_forecast as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
             ,updates.forecast_of_total_2020_25_outperformance_or_underperformance_payment AS Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
             ,amp6amp7base.[financial_odi]
@@ -57,7 +57,7 @@
 	past_performance_updates as (
         SELECT updates.[unique_id]
             ,updates.OFWAT_Year AS year
-            ,updates.submission_status as update_submission_status
+            ,updates.submission_status as submission_status
             ,amp6amp7base.[price_review]
             ,amp6amp7base.[company_type]
             ,amp6amp7base.sheet
@@ -82,12 +82,12 @@
             ,null as notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
             ,null as outperformance_payment_or_underperformance_payment_in_period_ODI
             ,null as outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
-            ,updates.pcl AS pcl
+            ,null as pcl
             ,updates.pcl_met as pcl_met
-            ,null as performance_level_actual
+            ,updates.pcl as performance_level_actual
             ,null as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast
             ,null as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
-            ,amp6amp7base.[financial_odi]
+            ,null as financial_odi
             ,null as underp_payment_collar
             ,null as underp_payment_deadband
             ,null as outp_payment_deadband

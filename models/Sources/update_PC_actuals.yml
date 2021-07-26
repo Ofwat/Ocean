@@ -42,7 +42,7 @@ sources:
             tests:
           - name: pcl_met
             tests:
-              - not_null
+              # - not_null
               - accepted_values:
                   values: ['No','Yes', NULL]
           - name: outperformance_or_underperformance_payment

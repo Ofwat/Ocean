@@ -18,12 +18,13 @@ To run tests on sources:
 dbt test --models source:*
 
 To test a specific source:
-dbt test --models source:ae_staging.source_pc_actuals_updates
+dbt test --models source:generated_sources.pc_actuals_updates
+
 
 # dbt run --models stg_pc_updates_with_key
 dbt snapshot --select pc_updates_snapshot
 
-dbt run --models F_PC_apr_table
+git statusF_PC_apr_table
 
 dbt run --full-refresh --models D_Element: command to run incremental 
 
