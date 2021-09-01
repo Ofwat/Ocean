@@ -1,5 +1,10 @@
 Welcome to your new dbt project!
 
+
+Project language: SQL DBT
+Project is about: DBT is making the transformation possible from 1 raw DB table to ultiple linked and filtered tables. Follwoing the star schema of the database.
+
+
 ### Using the starter project
 
 Try running the following commands:
@@ -13,9 +18,3 @@ Try running the following commands:
 - Join the [chat](http://slack.getdbt.com/) on Slack for live discussions and support
 - Find [dbt events](https://events.getdbt.com) near you
 - Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
-
-
-### Changes to be made in csv uploading:
-- ’ to '
-- ‘ to '
-
