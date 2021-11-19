@@ -23,8 +23,8 @@ select unique_id
     ,pc_unit_description
     ,decimal_places
     ,direction_of_improving_performance
-    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_2016_17] notional_outperformance_payment_or_underperformance_payment_accrued
-    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2016_gbpm_2016_17] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2017_2016_17] notional_outperformance_payment_or_underperformance_payment_accrued
+    ,[notional_outp_payment_or_underp_payment_accrued_at_31_march_2017_gbpm_2016_17] notional_outperformance_payment_or_underperformance_payment_accrued_GBPm
     ,[outp_payment_or_underp_payment_in_period_odis_2016_17] outperformance_payment_or_underperformance_payment_in_period_ODI
     ,[outp_payment_or_underp_payment_in_period_odis_gbpm_2016_17] outperformance_payment_or_underperformance_payment_in_period_ODI_GBPm
     ,[pcl_2016_17] pcl
