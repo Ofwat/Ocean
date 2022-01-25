@@ -32,11 +32,11 @@ sources:
           - name: pcl_2017_18
           - name: pcl_2018_19
           - name: pcl_2019_20
-          - name: drinking_water_quality_compliance
-          - name: water_quality_contacts
-          - name: supply_interruptions_3_hours
-          - name: pollution_incidents_cat_3
-          - name: internal_sewer_flooding
+          - name: PR14_comparative_drinking_water_compliance
+          - name: PR14_comparative_water_quality_contacts
+          - name: PR14_comparative_supply_interruptions_3_hours
+          - name: PR14_comparative_pollution_incidents_cat_3
+          - name: PR14_comparative_internal_sewer_flooding
           - name: scheme_specific_factor
           - name: asset_health
           - name: nep
@@ -47,10 +47,15 @@ sources:
           - name: financial_odi_2017_18
           - name: financial_odi_2018_19
           - name: financial_odi_2019_20
+          - name: notes_underp_payment_collar_2015_16
           - name: underp_payment_collar_2015_16
+          - name: notes_underp_payment_collar_2016_17
           - name: underp_payment_collar_2016_17
+          - name: notes_underp_payment_collar_2017_18
           - name: underp_payment_collar_2017_18
+          - name: notes_underp_payment_collar_2018_19
           - name: underp_payment_collar_2018_19
+          - name: notes_underp_payment_collar_2019_20
           - name: underp_payment_collar_2019_20
           - name: underp_payment_deadband_2015_16
           - name: underp_payment_deadband_2016_17
@@ -67,11 +72,17 @@ sources:
           - name: outp_payment_cap_2017_18
           - name: outp_payment_cap_2018_19
           - name: outp_payment_cap_2019_20
+          - name: notes_underp_payment1_incentive_rate_gbpm
           - name: underp_payment1_incentive_rate_gbpm
+          - name: notes_underp_payment2_incentive_rate_gbpm
           - name: underp_payment2_incentive_rate_gbpm
+          - name: notes_underp_payment3_incentive_rate_gbpm
           - name: underp_payment3_incentive_rate_gbpm
+          - name: notes_underp_payment4_incentive_rate_gbpm
           - name: underp_payment4_incentive_rate_gbpm
+          - name: notes_outp_payment1_incentive_rate_gbpm
           - name: outp_payment1_incentive_rate_gbpm
+          - name: notes_outp_payment2_incentive_rate_gbpm
           - name: outp_payment2_incentive_rate_gbpm
           - name: standard_odi_operand
           - name: standard_odi_operand_note
@@ -128,18 +139,6 @@ sources:
           - name: price_control_allocation_business_retail
           - name: price_control_allocation_direct_procurement_for_customers
           - name: price_control_allocation_dummy_control
-          - name: isnumeric_underp_payment1_incentive_rate_gbpm
-          - name: isnumeric_underp_payment2_incentive_rate_gbpm
-          - name: isnumeric_underp_payment3_incentive_rate_gbpm
-          - name: isnumeric_underp_payment4_incentive_rate_gbpm
-          - name: isnumeric_outp_payment1_incentive_rate_gbpm
-          - name: isnumeric_outp_payment2_incentive_rate_gbpm
-          - name: onlynumeric_underp_payment1_incentive_rate_gbpm
-          - name: onlynumeric_underp_payment2_incentive_rate_gbpm
-          - name: onlynumeric_underp_payment3_incentive_rate_gbpm
-          - name: onlynumeric_underp_payment4_incentive_rate_gbpm
-          - name: onlynumeric_outp_payment1_incentive_rate_gbpm
-          - name: onlynumeric_outp_payment2_incentive_rate_gbpm
       - name: PR14SubmeasureFinalCSVcreatedbyPython
         description: pr14 sub measures
         columns:
@@ -208,13 +207,13 @@ sources:
           - name: actual_performance_compared_with_previous_actual_performance_2018_19_to_2019_20
           - name: actual_performance_compared_with_previous_actual_performance_2014_15_to_2016_17_amp_so_far
       - name: PR19FinalCSVcreatedbyPython
-        description: pr19 sub measures
+        description: pr19 
         columns:
           - name: company
           - name: unique_id
           - name: outcome
           - name: pc_ref
-          - name: performance_commitment pc_name
+          - name: performance_commitment
           - name: pc_short_description
           - name: price_control_allocation_water_resources
           - name: price_control_allocation_water_network_plus
@@ -233,11 +232,6 @@ sources:
           - name: decimal_places
           - name: direction_of_improving_performance
           - name: common_and_comparable_bespoke_performance_commitment
-          - name: special_cost_factor
-          - name: scheme_specific_factor
-          - name: asset_health
-          - name: nep
-          - name: aim
           - name: customers_relative_priority
           - name: pcl_2020_21
           - name: pcl_2021_22
@@ -279,33 +273,25 @@ sources:
           - name: enhanced_outp_payment_cap_2022_23
           - name: enhanced_outp_payment_cap_2023_24
           - name: enhanced_outp_payment_cap_2024_25
+          - name: notes_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
           - name: underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
+          - name: notes_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
           - name: underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
+          - name: notes_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
           - name: underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
+          - name: notes_underp_payment_incentive_enhanced_underp_payment
           - name: underp_payment_incentive_enhanced_underp_payment
+          - name: notes_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
           - name: outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
+          - name: notes_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
           - name: outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
+          - name: notes_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
           - name: outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
+          - name: notes_outp_payment_incentive_enhanced_outp_payment
           - name: outp_payment_incentive_enhanced_outp_payment
           - name: standard_odi_cal
           - name: standard_odi_operand
           - name: standard_odi_operand_note
-          - name: isnumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
-          - name: onlynumeric_underp_payment_incentive_standard_underp_payment1_tier2_where_tiers_apply
-          - name: isnumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
-          - name: onlynumeric_underp_payment_incentive_standard_underp_payment2_tier1_where_tiers_apply
-          - name: isnumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
-          - name: onlynumeric_underp_payment_incentive_standard_underp_payment3_tier3_where_tiers_apply
-          - name: isnumeric_underp_payment_incentive_enhanced_underp_payment
-          - name: onlynumeric_underp_payment_incentive_enhanced_underp_payment
-          - name: isnumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
-          - name: onlynumeric_outp_payment_incentive_standard_outp_payment1_tier2_where_tiers_apply
-          - name: isnumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
-          - name: onlynumeric_outp_payment_incentive_standard_outp_payment2_tier1_where_tiers_apply
-          - name: isnumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
-          - name: onlynumeric_outp_payment_incentive_standard_outp_payment3_tier3_where_tiers_apply
-          - name: isnumeric_outp_payment_incentive_enhanced_outp_payment
-          - name: onlynumeric_outp_payment_incentive_enhanced_outp_payment
 models:
     - name: D_Element_table
       description: "Table with Elements information model"
