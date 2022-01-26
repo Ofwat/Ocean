@@ -39,6 +39,7 @@
             ,updates.forecast_of_total_2020_25_outperformance_or_underperformance_payment AS Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
             ,amp6amp7base.[financial_odi]
             ,amp6amp7base.[underp_payment_collar]
+            ,amp6amp7base.[notes_underp_payment_collar]
             ,amp6amp7base.[underp_payment_deadband]
             ,amp6amp7base.[outp_payment_deadband]
             ,amp6amp7base.[outp_payment_cap]
@@ -87,6 +88,7 @@
             ,null as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
             ,null as financial_odi
             ,null as underp_payment_collar
+            ,null as notes_underp_payment_collar
             ,null as underp_payment_deadband
             ,null as outp_payment_deadband
             ,null as outp_payment_cap

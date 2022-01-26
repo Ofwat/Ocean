@@ -35,6 +35,7 @@ select unique_id
     ,CAST(NULL as varchar(max)) as Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
     ,CAST(NULL as varchar(max)) as financial_odi
     ,CAST(NULL as varchar(max)) as underp_payment_collar
+    ,CAST(NULL as varchar(max)) as notes_underp_payment_collar
     ,CAST(NULL as varchar(max)) as underp_payment_deadband
     ,CAST(NULL as varchar(max)) as outp_payment_deadband
     ,CAST(NULL as varchar(max)) as outp_payment_cap

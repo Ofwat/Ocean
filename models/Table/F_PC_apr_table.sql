@@ -36,6 +36,7 @@ renamed as (
     ,Submission_status_id
     ,element.element_id
     ,underp_payment_collar
+    ,notes_underp_payment_collar
     ,underp_payment_deadband
     ,outp_payment_deadband
     ,outp_payment_cap

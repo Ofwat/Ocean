@@ -34,6 +34,7 @@ select unique_id
     ,[total_amp6_outp_payment_or_underp_payment_31_march_2020_forecast_gbpm_2017_18] Total_AMP6_outperformance_payment_or_underperformance_payment_forecast_GBPm
     ,[financial_odi_2017_18] financial_odi
     ,[underp_payment_collar_2017_18] underp_payment_collar
+    ,[notes_underp_payment_collar_2017_18] notes_underp_payment_collar
     ,[underp_payment_deadband_2017_18] underp_payment_deadband
     ,[outp_payment_deadband_2017_18] outp_payment_deadband
     ,[outp_payment_cap_2017_18] outp_payment_cap
